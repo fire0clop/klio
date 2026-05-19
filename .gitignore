@@ -1,0 +1,71 @@
+# ---- Secrets — never commit ----
+.env
+*.env
+.env.*
+!.env.example
+*.p8
+*.p12
+*.pem
+*.key
+*.mobileprovision
+*.certSigningRequest
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.pyo
+*$py.class
+.venv/
+venv/
+env/
+build/
+dist/
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ---- Swift / Xcode ----
+xcuserdata/
+DerivedData/
+build/
+*.xcuserstate
+*.xcscmblueprint
+*.xccheckout
+*.ipa
+*.dSYM
+*.dSYM.zip
+*.hmap
+*.moved-aside
+Pods/
+Carthage/Build/
+.swiftpm/
+timeline.xctimeline
+playground.xcworkspace
+
+# ---- JetBrains (IntelliJ / AppCode / PyCharm) ----
+.idea/
+*.iml
+*.iws
+out/
+
+# ---- Node ----
+node_modules/
+npm-debug.log*
+yarn-error.log*
+.pnp.*
+
+# ---- macOS ----
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# ---- Editors / misc ----
+.vscode/
+*.log
+*.tmp
