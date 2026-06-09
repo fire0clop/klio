@@ -1,0 +1,608 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0595072CC19B3DE197CDB6E5 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FFF18075D3F27BDCDF11C5 /* APIClient.swift */; };
+		0FC6C3E1DBFEA751F1D215D8 /* ProgressTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90F4ABCCE2D1EF7D2F8610 /* ProgressTab.swift */; };
+		13F8541DCC92DEEFE42E153D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F4C3AED1D97B929D9B4A4F1 /* Assets.xcassets */; };
+		1D974CF4A548335058558210 /* KlioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25772A17B79A6A5198FF8DF /* KlioApp.swift */; };
+		2E71ACE3DF461970DC2C3076 /* KlioTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92FAC5512A9BF627D6D725B /* KlioTheme.swift */; };
+		313E060935AB87CEB29823F2 /* AuthFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7E139C2A81D9724E14095B /* AuthFlow.swift */; };
+		34F69EA0BBC7482037AFB6D8 /* KlioTabRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284A5D9B8BA66705FFB5D902 /* KlioTabRoot.swift */; };
+		3F0BDBA507300E9C084222B6 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E27741F79683A9347800670 /* RootView.swift */; };
+		4229C1C95851975D1148C855 /* SocialAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726219EAF82C1236F1A02B2D /* SocialAuth.swift */; };
+		45F924F120CEF7FBB9442192 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC172D5FA34162A50FB5B0 /* RegisterView.swift */; };
+		54C60B93DAAAC95BAE8A795E /* KlioSplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D1876E9F8E30333990D1C0 /* KlioSplash.swift */; };
+		6A2660C8B885DB1EEFF5BF37 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = D651BCC88D077744F340045C /* Models.swift */; };
+		6B35C8F3B6E80E108B716B24 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7CF8823A1288778F89F169 /* DashboardView.swift */; };
+		6FC52399D394293621315ECB /* DashboardViewModel+Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6564C02F0CFE07286A0EDD1 /* DashboardViewModel+Commit.swift */; };
+		7F84B9F99681FE5BE7488624 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53D9C3292C34A637F5C7F12 /* LoginView.swift */; };
+		87B302C1B2B3165DDA0F78CF /* DemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209F67DDA2E3AF74B4EEC568 /* DemoData.swift */; };
+		902C3E05017A79FB6E36E4E5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 28DD1335E30EA98FDC817133 /* Localizable.strings */; };
+		91E4E69452A39F6F07E7D3D9 /* TodayGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C22E4740DD58733948D3989 /* TodayGrid.swift */; };
+		934A64462BAF3A6DA970D4E3 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833133A4C4DA1D03B72762EE /* AppConfig.swift */; };
+		95E81AEFC9F3F10A95FD86CE /* OnboardingFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BAC88DA18AE83E4D4A656F /* OnboardingFlow.swift */; };
+		984E8982AAA1532982794286 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDA237416ED96582F0F3C7E /* ProfileView.swift */; };
+		A2E4F41D867A5539288BADCA /* LocaleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936B06CE9C6BA85E3DBEA6E5 /* LocaleManager.swift */; };
+		A4DEF970BA2303556439125F /* KlioAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD3651B52E82C06B541EFDE /* KlioAnalytics.swift */; };
+		BDF9DF113AB2F01A0DC45484 /* GoogleSignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D0765DBF54BEA8168E5C72 /* GoogleSignInCoordinator.swift */; };
+		BFEB1724F6D0F2F514C923E7 /* TodayWaves.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7962D5BECCEAE11F8A4A73 /* TodayWaves.swift */; };
+		C256DA13147D4273AB53C828 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = C59EAEBF47D7D8C5B669A33B /* PrivacyInfo.xcprivacy */; };
+		C5F7EE769F1E772BB3CC5A28 /* LanguagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09332036B0E2EEA2B6FD4F54 /* LanguagePicker.swift */; };
+		CCE35FA345F4D46C3F74D997 /* GoalCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FCC683DB713E8C8CFFF1D9 /* GoalCreationView.swift */; };
+		DBF77B8A081134B4E9FD8EF4 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DC3E86709ADF8A2C4338C1 /* SessionStore.swift */; };
+		EB0549E281DEB3812D9AC82C /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E04988AEF5FEA59E53F960 /* ChatBubble.swift */; };
+		F42CD674CE459A379C73223F /* AppleSignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E732EFBD86F088521E07631E /* AppleSignInCoordinator.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		09332036B0E2EEA2B6FD4F54 /* LanguagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagePicker.swift; sourceTree = "<group>"; };
+		16FFF18075D3F27BDCDF11C5 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		209F67DDA2E3AF74B4EEC568 /* DemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoData.swift; sourceTree = "<group>"; };
+		284A5D9B8BA66705FFB5D902 /* KlioTabRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KlioTabRoot.swift; sourceTree = "<group>"; };
+		2DC9F358B8FC37A5327FB43D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3A7E0AFFE77FDC0A52D732E8 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3D97F2C14FE57AAB1A8E421D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		50AC172D5FA34162A50FB5B0 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		546162DE826F678E0848ADC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		5F4C3AED1D97B929D9B4A4F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		68FCC683DB713E8C8CFFF1D9 /* GoalCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCreationView.swift; sourceTree = "<group>"; };
+		726219EAF82C1236F1A02B2D /* SocialAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialAuth.swift; sourceTree = "<group>"; };
+		7A7CF8823A1288778F89F169 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		7B7962D5BECCEAE11F8A4A73 /* TodayWaves.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayWaves.swift; sourceTree = "<group>"; };
+		7C09E92329867991A0A02088 /* Klio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Klio.entitlements; sourceTree = "<group>"; };
+		7E27741F79683A9347800670 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		833133A4C4DA1D03B72762EE /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		8CD3651B52E82C06B541EFDE /* KlioAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KlioAnalytics.swift; sourceTree = "<group>"; };
+		90D1876E9F8E30333990D1C0 /* KlioSplash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KlioSplash.swift; sourceTree = "<group>"; };
+		936B06CE9C6BA85E3DBEA6E5 /* LocaleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleManager.swift; sourceTree = "<group>"; };
+		95DC3E86709ADF8A2C4338C1 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
+		99E04988AEF5FEA59E53F960 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
+		9C22E4740DD58733948D3989 /* TodayGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayGrid.swift; sourceTree = "<group>"; };
+		9CDA237416ED96582F0F3C7E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		A25772A17B79A6A5198FF8DF /* KlioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KlioApp.swift; sourceTree = "<group>"; };
+		A6564C02F0CFE07286A0EDD1 /* DashboardViewModel+Commit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DashboardViewModel+Commit.swift"; sourceTree = "<group>"; };
+		C59EAEBF47D7D8C5B669A33B /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		C5D0765DBF54BEA8168E5C72 /* GoogleSignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInCoordinator.swift; sourceTree = "<group>"; };
+		CE90F4ABCCE2D1EF7D2F8610 /* ProgressTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressTab.swift; sourceTree = "<group>"; };
+		D53D9C3292C34A637F5C7F12 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		D651BCC88D077744F340045C /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		D7378E3AF628EF27D829B797 /* Klio.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Klio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D92FAC5512A9BF627D6D725B /* KlioTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KlioTheme.swift; sourceTree = "<group>"; };
+		E732EFBD86F088521E07631E /* AppleSignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignInCoordinator.swift; sourceTree = "<group>"; };
+		EB7E139C2A81D9724E14095B /* AuthFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFlow.swift; sourceTree = "<group>"; };
+		F3BAC88DA18AE83E4D4A656F /* OnboardingFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFlow.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		10B12619AF63A9EDBED73855 /* SocialAuth */ = {
+			isa = PBXGroup;
+			children = (
+				E732EFBD86F088521E07631E /* AppleSignInCoordinator.swift */,
+				C5D0765DBF54BEA8168E5C72 /* GoogleSignInCoordinator.swift */,
+				726219EAF82C1236F1A02B2D /* SocialAuth.swift */,
+			);
+			path = SocialAuth;
+			sourceTree = "<group>";
+		};
+		14813FE94A7B4071E38C49E1 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				D92FAC5512A9BF627D6D725B /* KlioTheme.swift */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
+		1F1107772EED4BA4363B3938 /* GoalCreation */ = {
+			isa = PBXGroup;
+			children = (
+				68FCC683DB713E8C8CFFF1D9 /* GoalCreationView.swift */,
+			);
+			path = GoalCreation;
+			sourceTree = "<group>";
+		};
+		2CB4DA74CA22B195E0487F47 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				284A5D9B8BA66705FFB5D902 /* KlioTabRoot.swift */,
+				CE90F4ABCCE2D1EF7D2F8610 /* ProgressTab.swift */,
+				9C22E4740DD58733948D3989 /* TodayGrid.swift */,
+				7B7962D5BECCEAE11F8A4A73 /* TodayWaves.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2FA0D3D06BCA7835803FAB3D /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				EB7E139C2A81D9724E14095B /* AuthFlow.swift */,
+				D53D9C3292C34A637F5C7F12 /* LoginView.swift */,
+				50AC172D5FA34162A50FB5B0 /* RegisterView.swift */,
+				10B12619AF63A9EDBED73855 /* SocialAuth */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		38E5418E756154E420227411 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				28DD1335E30EA98FDC817133 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4E8FED273CFDE8FCC59E6CD1 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				99E04988AEF5FEA59E53F960 /* ChatBubble.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		5F7997D1626F37F00F0BE395 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D7378E3AF628EF27D829B797 /* Klio.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		67F82D43F4E8EB01B81FA24C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5F4C3AED1D97B929D9B4A4F1 /* Assets.xcassets */,
+				546162DE826F678E0848ADC2 /* Info.plist */,
+				7C09E92329867991A0A02088 /* Klio.entitlements */,
+				A25772A17B79A6A5198FF8DF /* KlioApp.swift */,
+				C59EAEBF47D7D8C5B669A33B /* PrivacyInfo.xcprivacy */,
+				4E8FED273CFDE8FCC59E6CD1 /* Components */,
+				BDB66BAFFCB911D63A1E849F /* Core */,
+				8597604E7191D0B3A5B96489 /* Features */,
+				38E5418E756154E420227411 /* Resources */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		6CE31E235684488DBAB2C209 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				8CD3651B52E82C06B541EFDE /* KlioAnalytics.swift */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		73F9FEC9950176C880EFCDC5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				16FFF18075D3F27BDCDF11C5 /* APIClient.swift */,
+				D651BCC88D077744F340045C /* Models.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		7FC7040E8021DD78D76380FB /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				90D1876E9F8E30333990D1C0 /* KlioSplash.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		8597604E7191D0B3A5B96489 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				6CE31E235684488DBAB2C209 /* Analytics */,
+				2FA0D3D06BCA7835803FAB3D /* Auth */,
+				A824C4184D0877E59173DFD9 /* Dashboard */,
+				EC79EB751EA0C3FAB257F041 /* Demo */,
+				1F1107772EED4BA4363B3938 /* GoalCreation */,
+				2CB4DA74CA22B195E0487F47 /* Home */,
+				CCF0FDF0034A50C6F1F5A669 /* Onboarding */,
+				A608DD07355E085E9EF8B616 /* Profile */,
+				7FC7040E8021DD78D76380FB /* Splash */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		9B6709CABBDC9E69B6417809 = {
+			isa = PBXGroup;
+			children = (
+				9D6667A60D8F572257BA1739 /* Sources */,
+				5F7997D1626F37F00F0BE395 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9D6667A60D8F572257BA1739 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				67F82D43F4E8EB01B81FA24C /* App */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		A608DD07355E085E9EF8B616 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				9CDA237416ED96582F0F3C7E /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		A824C4184D0877E59173DFD9 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				7A7CF8823A1288778F89F169 /* DashboardView.swift */,
+				A6564C02F0CFE07286A0EDD1 /* DashboardViewModel+Commit.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		ADE35D202D965E0235CD4E42 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				95DC3E86709ADF8A2C4338C1 /* SessionStore.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		B5C4535147F7CCA86D6CB0FC /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				09332036B0E2EEA2B6FD4F54 /* LanguagePicker.swift */,
+				936B06CE9C6BA85E3DBEA6E5 /* LocaleManager.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		BDB66BAFFCB911D63A1E849F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				FA53096C3197B807E5293B74 /* Config */,
+				14813FE94A7B4071E38C49E1 /* Design */,
+				B5C4535147F7CCA86D6CB0FC /* Localization */,
+				73F9FEC9950176C880EFCDC5 /* Network */,
+				E2752FD99F090971CFEEAF56 /* Router */,
+				ADE35D202D965E0235CD4E42 /* Storage */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		CCF0FDF0034A50C6F1F5A669 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				F3BAC88DA18AE83E4D4A656F /* OnboardingFlow.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		E2752FD99F090971CFEEAF56 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				7E27741F79683A9347800670 /* RootView.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EC79EB751EA0C3FAB257F041 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				209F67DDA2E3AF74B4EEC568 /* DemoData.swift */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		FA53096C3197B807E5293B74 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				833133A4C4DA1D03B72762EE /* AppConfig.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9ED342DA55759CC788023936 /* Klio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4D9B049AFD7D70D35184D9C /* Build configuration list for PBXNativeTarget "Klio" */;
+			buildPhases = (
+				DEF717BF0060DFCB8A99F5DF /* Sources */,
+				18189167953E86DCE7E7922F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Klio;
+			packageProductDependencies = (
+			);
+			productName = Klio;
+			productReference = D7378E3AF628EF27D829B797 /* Klio.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		50D1708F2DFB92C29771A426 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = 4DA57048EAFABBBAF7606128 /* Build configuration list for PBXProject "Klio" */;
+			developmentRegion = ru;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+				es,
+				ru,
+			);
+			mainGroup = 9B6709CABBDC9E69B6417809;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 5F7997D1626F37F00F0BE395 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9ED342DA55759CC788023936 /* Klio */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18189167953E86DCE7E7922F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13F8541DCC92DEEFE42E153D /* Assets.xcassets in Resources */,
+				902C3E05017A79FB6E36E4E5 /* Localizable.strings in Resources */,
+				C256DA13147D4273AB53C828 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DEF717BF0060DFCB8A99F5DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0595072CC19B3DE197CDB6E5 /* APIClient.swift in Sources */,
+				934A64462BAF3A6DA970D4E3 /* AppConfig.swift in Sources */,
+				F42CD674CE459A379C73223F /* AppleSignInCoordinator.swift in Sources */,
+				313E060935AB87CEB29823F2 /* AuthFlow.swift in Sources */,
+				EB0549E281DEB3812D9AC82C /* ChatBubble.swift in Sources */,
+				6B35C8F3B6E80E108B716B24 /* DashboardView.swift in Sources */,
+				6FC52399D394293621315ECB /* DashboardViewModel+Commit.swift in Sources */,
+				87B302C1B2B3165DDA0F78CF /* DemoData.swift in Sources */,
+				CCE35FA345F4D46C3F74D997 /* GoalCreationView.swift in Sources */,
+				BDF9DF113AB2F01A0DC45484 /* GoogleSignInCoordinator.swift in Sources */,
+				A4DEF970BA2303556439125F /* KlioAnalytics.swift in Sources */,
+				1D974CF4A548335058558210 /* KlioApp.swift in Sources */,
+				54C60B93DAAAC95BAE8A795E /* KlioSplash.swift in Sources */,
+				34F69EA0BBC7482037AFB6D8 /* KlioTabRoot.swift in Sources */,
+				2E71ACE3DF461970DC2C3076 /* KlioTheme.swift in Sources */,
+				C5F7EE769F1E772BB3CC5A28 /* LanguagePicker.swift in Sources */,
+				A2E4F41D867A5539288BADCA /* LocaleManager.swift in Sources */,
+				7F84B9F99681FE5BE7488624 /* LoginView.swift in Sources */,
+				6A2660C8B885DB1EEFF5BF37 /* Models.swift in Sources */,
+				95E81AEFC9F3F10A95FD86CE /* OnboardingFlow.swift in Sources */,
+				984E8982AAA1532982794286 /* ProfileView.swift in Sources */,
+				0FC6C3E1DBFEA751F1D215D8 /* ProgressTab.swift in Sources */,
+				45F924F120CEF7FBB9442192 /* RegisterView.swift in Sources */,
+				3F0BDBA507300E9C084222B6 /* RootView.swift in Sources */,
+				DBF77B8A081134B4E9FD8EF4 /* SessionStore.swift in Sources */,
+				4229C1C95851975D1148C855 /* SocialAuth.swift in Sources */,
+				91E4E69452A39F6F07E7D3D9 /* TodayGrid.swift in Sources */,
+				BFEB1724F6D0F2F514C923E7 /* TodayWaves.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		28DD1335E30EA98FDC817133 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2DC9F358B8FC37A5327FB43D /* en */,
+				3A7E0AFFE77FDC0A52D732E8 /* es */,
+				3D97F2C14FE57AAB1A8E421D /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2B502F59A865D039663FA7F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 2;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_CONCURRENCY = complete;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		2EE6404E53066B60A962A022 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 2;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_CONCURRENCY = complete;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		364F774BD39E917BBA8E2597 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Sources/App/Klio.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Sources/App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.klio.diary;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EA939D016FE76EF3A0101481 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Sources/App/Klio.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Sources/App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.klio.diary;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4DA57048EAFABBBAF7606128 /* Build configuration list for PBXProject "Klio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B502F59A865D039663FA7F8 /* Debug */,
+				2EE6404E53066B60A962A022 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B4D9B049AFD7D70D35184D9C /* Build configuration list for PBXNativeTarget "Klio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				364F774BD39E917BBA8E2597 /* Debug */,
+				EA939D016FE76EF3A0101481 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 50D1708F2DFB92C29771A426 /* Project object */;
+}
