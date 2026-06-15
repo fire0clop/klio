@@ -1,0 +1,159 @@
+/* ===== Auth ===== */
+"С возвращением" = "Welcome back";
+"продолжай свой путь" = "continue your journey";
+"Вход" = "Sign in";
+"Регистрация" = "Sign up";
+"пароль" = "password";
+"Забыли пароль?" = "Forgot password?";
+"или войти через" = "or continue with";
+"Войти" = "Sign in";
+"Добро пожаловать" = "Welcome";
+"начни свой путь сегодня" = "start your journey today";
+"минимум 6 символов" = "at least 6 characters";
+"Создать аккаунт" = "Create account";
+
+/* ===== Navigation ===== */
+"Сегодня" = "Today";
+"Прогресс" = "Progress";
+"Разбор" = "Insights";
+"Профиль" = "Profile";
+
+/* ===== Language ===== */
+"Язык" = "Language";
+"Язык приложения" = "App language";
+"ЯЗЫК" = "LANGUAGE";
+
+/* ===== Today ===== */
+"Привычки сегодня" = "Today's habits";
+"Удалить цель?" = "Delete goal?";
+"Отмена" = "Cancel";
+"Удалить" = "Delete";
+"«%@» и вся её история будут удалены безвозвратно." = "\"%@\" and all its history will be deleted for good.";
+"отметить" = "log it";
+"Поставь первую цель" = "Set your first goal";
+"Создать" = "Create";
+"дней подряд" = "day streak";
+"Доброе утро" = "Good morning";
+"Добрый день" = "Good afternoon";
+"Добрый вечер" = "Good evening";
+"Доброй ночи" = "Good night";
+"Сделано сегодня" = "Done today";
+"Отметь выполнение" = "Mark as done";
+"цель достигнута" = "goal reached";
+"Сегодня чисто" = "Clean today";
+"Отметь воздержание" = "Mark as abstained";
+"перебор" = "over limit";
+"в норме" = "on track";
+
+/* ===== Razbor (Insights) ===== */
+"Реакция ИИ и твои растущие сферы" = "AI feedback and your growing life areas";
+"ОТ ИИ" = "FROM AI";
+"Реакция на вчера" = "On yesterday";
+"СФЕРЫ И НАВЫКИ" = "AREAS & SKILLS";
+"ПО ДНЯМ · 4 НЕДЕЛИ" = "BY DAY · 4 WEEKS";
+"Пока копим данные — кривая появится после нескольких дней отметок." = "Still gathering data — the curve will show up after a few days of check-ins.";
+"Победа" = "Win";
+"Внимание" = "Heads up";
+"Динамика" = "Trend";
+"Совет" = "Tip";
+"Реакция" = "Reaction";
+"ИИ читает твой день…" = "AI is reading your day…";
+"Пока недостаточно данных" = "Not enough data yet";
+"Отмечай цели пару дней — и здесь появится\nреакция ИИ и рост твоих сфер." = "Check off your goals for a couple of days — and AI feedback\nand your growing areas will show up here.";
+
+/* ===== Progress ===== */
+"Серии и история по целям" = "Streaks and history by goal";
+"Неделя" = "Week";
+"%lld%% выполнено" = "%lld%% done";
+"выполнено" = "done";
+"серия" = "streak";
+"целей" = "goals";
+"ИСТОРИЯ ПО ЦЕЛЯМ" = "HISTORY BY GOAL";
+"за %lld дней · %lld%% выполнено" = "over %lld days · %lld%% done";
+"Пн" = "Mon";
+"Вт" = "Tue";
+"Ср" = "Wed";
+"Чт" = "Thu";
+"Пт" = "Fri";
+"Сб" = "Sat";
+"Вс" = "Sun";
+
+/* ===== Profile ===== */
+"Имя" = "Name";
+"Дата рождения" = "Date of birth";
+"Пол" = "Gender";
+"Рост" = "Height";
+"Вес" = "Weight";
+"ДАННЫЕ" = "DATA";
+"О ПРИЛОЖЕНИИ" = "ABOUT";
+"АККАУНТ" = "ACCOUNT";
+"Выйти из аккаунта?" = "Log out?";
+"Выйти" = "Log out";
+"Тебе нужно будет войти снова" = "You'll need to log in again";
+"Удалить аккаунт?" = "Delete account?";
+"Все твои данные, цели и история будут удалены навсегда. Это действие нельзя отменить." = "All your data, goals, and history will be permanently deleted. This action can't be undone.";
+"ИЗ ЧЕГО СКЛАДЫВАЕТСЯ" = "WHAT MAKES IT UP";
+"ИНДЕКС" = "INDEX";
+"НАБИРАЕШЬ" = "BUILDING UP";
+"В БАЛАНСЕ" = "IN BALANCE";
+"НА ПОДЪЁМЕ" = "ON THE RISE";
+"Серия" = "Streak";
+"активных целей" = "active goals";
+"выполнено всего" = "completed total";
+"дней" = "days";
+"лучшая серия подряд" = "best streak in a row";
+"Политика конфиденциальности" = "Privacy Policy";
+"Условия использования" = "Terms of Use";
+"участник Klio" = "Klio member";
+"Удалить аккаунт" = "Delete account";
+"Мужской" = "Male";
+"Женский" = "Female";
+"Сохранить" = "Save";
+
+/* ===== Goal creation ===== */
+"Новая цель" = "New goal";
+"Уточнение" = "Refine";
+"Готово" = "Done";
+"Какую цель поставим?" = "What goal are we setting?";
+"Напиши своими словами — ИИ\nразберёт и сделает её персональной" = "Describe it in your own words — AI\nwill break it down and make it personal";
+"Например: пробегать 5 км три раза в неделю" = "For example: run 5 km three times a week";
+"ИДЕИ" = "IDEAS";
+"Читать 30 минут в день" = "Read 30 minutes a day";
+"Бросить курить" = "Quit smoking";
+"10 000 шагов" = "10,000 steps";
+"Пить 2 литра воды" = "Drink 2 liters of water";
+"Зарядка по утрам" = "Morning workout";
+"Меньше часа в телефоне" = "Under an hour on the phone";
+"Продолжить" = "Continue";
+"ИИ задаёт пару вопросов для точности" = "AI asks a couple of questions to get it right";
+"Сеть прервалась" = "Connection lost";
+"Отправить снова" = "Send again";
+"Ответить…" = "Reply…";
+"Цель создана!" = "Goal created!";
+"ИИ разобрал твою цель и готов отслеживать прогресс" = "AI broke down your goal and is ready to track your progress";
+"Начать отслеживание" = "Start tracking";
+"Не удалось создать цель. Проверь соединение." = "Couldn't create the goal. Check your connection.";
+
+/* ===== Onboarding ===== */
+"О себе" = "About you";
+"Параметры тела" = "Body details";
+"Расскажи о себе" = "Tell us about yourself";
+"Это поможет персонализировать\nотслеживание для тебя" = "This helps personalize\ntracking just for you";
+"Как тебя зовут?" = "What's your name?";
+"Возраст: %lld лет" = "Age: %lld";
+"Другой" = "Other";
+"Далее" = "Next";
+"Пропустить" = "Skip";
+"Необязательно, но помогает\nточнее отслеживать прогресс" = "Optional, but helps\ntrack your progress more accurately";
+"Рост, см" = "Height, cm";
+"Вес, кг" = "Weight, kg";
+"Ты всегда сможешь изменить данные в профиле" = "You can always change this in your profile";
+"Начать" = "Start";
+
+/* ===== Extra dynamic ===== */
+"цель" = "goal";
+"участник Klio · %lld сфер роста" = "Klio member · %lld growth areas";
+
+/* ===== Account deletion ===== */
+"Не удалось удалить аккаунт" = "Couldn't delete account";
+"Проверь соединение и попробуй ещё раз." = "Check your connection and try again.";
