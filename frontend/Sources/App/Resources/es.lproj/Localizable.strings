@@ -1,0 +1,159 @@
+/* ===== Auth ===== */
+"С возвращением" = "Bienvenido de nuevo";
+"продолжай свой путь" = "continúa tu camino";
+"Вход" = "Entrar";
+"Регистрация" = "Registro";
+"пароль" = "contraseña";
+"Забыли пароль?" = "¿Olvidaste la contraseña?";
+"или войти через" = "o continúa con";
+"Войти" = "Entrar";
+"Добро пожаловать" = "Bienvenido";
+"начни свой путь сегодня" = "empieza tu camino hoy";
+"минимум 6 символов" = "mínimo 6 caracteres";
+"Создать аккаунт" = "Crear cuenta";
+
+/* ===== Navigation ===== */
+"Сегодня" = "Hoy";
+"Прогресс" = "Progreso";
+"Разбор" = "Análisis";
+"Профиль" = "Perfil";
+
+/* ===== Language ===== */
+"Язык" = "Idioma";
+"Язык приложения" = "Idioma de la app";
+"ЯЗЫК" = "IDIOMA";
+
+/* ===== Today ===== */
+"Привычки сегодня" = "Hábitos de hoy";
+"Удалить цель?" = "¿Eliminar objetivo?";
+"Отмена" = "Cancelar";
+"Удалить" = "Eliminar";
+"«%@» и вся её история будут удалены безвозвратно." = "\"%@\" y todo su historial se eliminarán para siempre.";
+"отметить" = "registrar";
+"Поставь первую цель" = "Crea tu primer objetivo";
+"Создать" = "Crear";
+"дней подряд" = "días seguidos";
+"Доброе утро" = "Buenos días";
+"Добрый день" = "Buenas tardes";
+"Добрый вечер" = "Buenas noches";
+"Доброй ночи" = "Buenas noches";
+"Сделано сегодня" = "Hecho hoy";
+"Отметь выполнение" = "Marca como hecho";
+"цель достигнута" = "objetivo logrado";
+"Сегодня чисто" = "Hoy limpio";
+"Отметь воздержание" = "Marca que lo evitaste";
+"перебор" = "te pasaste";
+"в норме" = "vas bien";
+
+/* ===== Razbor (Insights) ===== */
+"Реакция ИИ и твои растущие сферы" = "Comentarios de la IA y tus áreas en crecimiento";
+"ОТ ИИ" = "DE LA IA";
+"Реакция на вчера" = "Sobre ayer";
+"СФЕРЫ И НАВЫКИ" = "ÁREAS Y HABILIDADES";
+"ПО ДНЯМ · 4 НЕДЕЛИ" = "POR DÍA · 4 SEMANAS";
+"Пока копим данные — кривая появится после нескольких дней отметок." = "Aún reuniendo datos: la curva aparecerá tras varios días de registros.";
+"Победа" = "Logro";
+"Внимание" = "Atención";
+"Динамика" = "Tendencia";
+"Совет" = "Consejo";
+"Реакция" = "Reacción";
+"ИИ читает твой день…" = "La IA está leyendo tu día…";
+"Пока недостаточно данных" = "Aún no hay datos suficientes";
+"Отмечай цели пару дней — и здесь появится\nреакция ИИ и рост твоих сфер." = "Marca tus metas un par de días y aquí aparecerán\nlos comentarios de la IA y el crecimiento de tus áreas.";
+
+/* ===== Progress ===== */
+"Серии и история по целям" = "Rachas e historial por meta";
+"Неделя" = "Semana";
+"%lld%% выполнено" = "%lld%% completado";
+"выполнено" = "completado";
+"серия" = "racha";
+"целей" = "metas";
+"ИСТОРИЯ ПО ЦЕЛЯМ" = "HISTORIAL POR META";
+"за %lld дней · %lld%% выполнено" = "en %lld días · %lld%% completado";
+"Пн" = "Lun";
+"Вт" = "Mar";
+"Ср" = "Mié";
+"Чт" = "Jue";
+"Пт" = "Vie";
+"Сб" = "Sáb";
+"Вс" = "Dom";
+
+/* ===== Profile ===== */
+"Имя" = "Nombre";
+"Дата рождения" = "Fecha de nacimiento";
+"Пол" = "Sexo";
+"Рост" = "Altura";
+"Вес" = "Peso";
+"ДАННЫЕ" = "DATOS";
+"О ПРИЛОЖЕНИИ" = "ACERCA DE";
+"АККАУНТ" = "CUENTA";
+"Выйти из аккаунта?" = "¿Cerrar sesión?";
+"Выйти" = "Cerrar sesión";
+"Тебе нужно будет войти снова" = "Tendrás que iniciar sesión de nuevo";
+"Удалить аккаунт?" = "¿Eliminar cuenta?";
+"Все твои данные, цели и история будут удалены навсегда. Это действие нельзя отменить." = "Todos tus datos, objetivos e historial se eliminarán para siempre. Esta acción no se puede deshacer.";
+"ИЗ ЧЕГО СКЛАДЫВАЕТСЯ" = "DE QUÉ SE COMPONE";
+"ИНДЕКС" = "ÍNDICE";
+"НАБИРАЕШЬ" = "SUBIENDO";
+"В БАЛАНСЕ" = "EN EQUILIBRIO";
+"НА ПОДЪЁМЕ" = "EN ASCENSO";
+"Серия" = "Racha";
+"активных целей" = "objetivos activos";
+"выполнено всего" = "completado en total";
+"дней" = "días";
+"лучшая серия подряд" = "mejor racha seguida";
+"Политика конфиденциальности" = "Política de privacidad";
+"Условия использования" = "Términos de uso";
+"участник Klio" = "miembro de Klio";
+"Удалить аккаунт" = "Eliminar cuenta";
+"Мужской" = "Hombre";
+"Женский" = "Mujer";
+"Сохранить" = "Guardar";
+
+/* ===== Goal creation ===== */
+"Новая цель" = "Nueva meta";
+"Уточнение" = "Afinar";
+"Готово" = "Listo";
+"Какую цель поставим?" = "¿Qué meta nos ponemos?";
+"Напиши своими словами — ИИ\nразберёт и сделает её персональной" = "Escríbela con tus palabras — la IA\nla analizará y la hará personal";
+"Например: пробегать 5 км три раза в неделю" = "Por ejemplo: correr 5 km tres veces por semana";
+"ИДЕИ" = "IDEAS";
+"Читать 30 минут в день" = "Leer 30 minutos al día";
+"Бросить курить" = "Dejar de fumar";
+"10 000 шагов" = "10 000 pasos";
+"Пить 2 литра воды" = "Beber 2 litros de agua";
+"Зарядка по утрам" = "Ejercicio por la mañana";
+"Меньше часа в телефоне" = "Menos de una hora en el móvil";
+"Продолжить" = "Continuar";
+"ИИ задаёт пару вопросов для точности" = "La IA hace un par de preguntas para afinar";
+"Сеть прервалась" = "Se perdió la conexión";
+"Отправить снова" = "Enviar de nuevo";
+"Ответить…" = "Responder…";
+"Цель создана!" = "¡Meta creada!";
+"ИИ разобрал твою цель и готов отслеживать прогресс" = "La IA analizó tu meta y está lista para seguir tu progreso";
+"Начать отслеживание" = "Empezar a seguir";
+"Не удалось создать цель. Проверь соединение." = "No se pudo crear la meta. Revisa tu conexión.";
+
+/* ===== Onboarding ===== */
+"О себе" = "Sobre ti";
+"Параметры тела" = "Datos corporales";
+"Расскажи о себе" = "Cuéntanos sobre ti";
+"Это поможет персонализировать\nотслеживание для тебя" = "Esto ayuda a personalizar\nel seguimiento para ti";
+"Как тебя зовут?" = "¿Cómo te llamas?";
+"Возраст: %lld лет" = "Edad: %lld";
+"Другой" = "Otro";
+"Далее" = "Siguiente";
+"Пропустить" = "Omitir";
+"Необязательно, но помогает\nточнее отслеживать прогресс" = "Opcional, pero ayuda a\nseguir tu progreso con más precisión";
+"Рост, см" = "Altura, cm";
+"Вес, кг" = "Peso, kg";
+"Ты всегда сможешь изменить данные в профиле" = "Siempre podrás cambiar estos datos en tu perfil";
+"Начать" = "Empezar";
+
+/* ===== Extra dynamic ===== */
+"цель" = "objetivo";
+"участник Klio · %lld сфер роста" = "miembro de Klio · %lld áreas de crecimiento";
+
+/* ===== Account deletion ===== */
+"Не удалось удалить аккаунт" = "No se pudo eliminar la cuenta";
+"Проверь соединение и попробуй ещё раз." = "Revisa tu conexión e inténtalo de nuevo.";
