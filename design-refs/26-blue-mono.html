@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Klio · 26 blue-mono</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:-apple-system,Inter,system-ui,sans-serif}
+body{background:#0e0e10;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:24px}
+.phone{width:340px;height:720px;border-radius:46px;overflow:hidden;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.notch{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:110px;height:26px;background:#000;border-radius:14px;z-index:99}
+.scr{position:absolute;inset:0;overflow-y:auto;padding:56px 18px 90px;
+background:radial-gradient(120% 80% at 0% 0%,#bcd2ff 0,transparent 50%),radial-gradient(120% 80% at 100% 6%,#a9c7ff 0,transparent 52%),radial-gradient(100% 90% at 50% 100%,#c6c2ff 0,transparent 55%),linear-gradient(160deg,#dbe6ff,#cdd9ff)}
+.scr::-webkit-scrollbar{display:none}
+.status{display:flex;justify-content:space-between;font-size:13px;font-weight:600;color:#2b2545}
+.hi{margin-top:18px}
+.hi h1{font-size:26px;color:#23304f;letter-spacing:-.5px}
+.hi p{font-size:13px;color:rgba(40,55,95,.6);margin-top:4px;font-weight:500}
+.w{backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);background:rgba(255,255,255,.30);border:1px solid rgba(255,255,255,.55);border-radius:26px;box-shadow:0 10px 30px rgba(60,80,160,.18);padding:16px;position:relative;overflow:hidden}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.sq{aspect-ratio:1/1}
+.wide{grid-column:span 2}
+.big{grid-column:span 2;min-height:170px}
+.lbl{font-size:12px;font-weight:600;color:rgba(40,55,95,.65)}
+.val{font-size:22px;font-weight:700;color:#23304f;letter-spacing:-.5px}
+.row{display:flex;align-items:center;gap:10px}
+.dot{width:9px;height:9px;border-radius:50%}
+.bigring{display:flex;align-items:center;gap:16px}
+.summ{font-size:13px;color:rgba(40,55,95,.7);font-weight:500;line-height:1.5}
+.summ b{color:#23304f}
+.barrow{display:flex;align-items:flex-end;gap:6px;height:54px;margin-top:12px}
+.bar{flex:1;border-radius:6px 6px 3px 3px;background:linear-gradient(180deg,#7fa8ff,#9db9ff)}
+.day{font-size:9px;text-align:center;color:rgba(40,55,95,.5);margin-top:4px;font-weight:600}
+.chk{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(120,150,230,.18);border:1.5px solid rgba(120,150,230,.4)}
+.streakbox{display:flex;flex-direction:column;justify-content:space-between;height:100%}
+.tabbar{position:absolute;left:0;right:0;bottom:0;height:74px;background:rgba(20,28,52,.55);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);display:flex;justify-content:space-around;align-items:center;border-top:1px solid rgba(255,255,255,.12);z-index:50}
+.tab{width:24px;height:24px;border-radius:8px;opacity:.55}
+.tab.on{opacity:1;background:rgba(159,185,255,.9)}
+.water-fill{position:absolute;left:0;right:0;bottom:0;height:55%;background:linear-gradient(180deg,rgba(94,131,168,.35),rgba(94,131,168,.6))}
+.pill{display:inline-block;font-size:11px;font-weight:600;padding:3px 9px;border-radius:20px;background:rgba(120,150,230,.2);color:#33457a}
+</style>
+</head>
+<body>
+<div class="phone">
+<div class="notch"></div>
+<div class="scr">
+<div class="status"><span>9:41</span><span>📶 🔋</span></div>
+
+<div class="hi">
+<h1>Добрый день</h1>
+<p>Пятница · 19 июня · 2 из 5 закрыто</p>
+</div>
+
+<div class="grid">
+<!-- big summary ring -->
+<div class="w big">
+<div class="bigring">
+<svg viewBox="0 0 120 120" width="108" height="108">
+<circle cx="60" cy="60" r="50" fill="none" stroke="rgba(120,150,230,.2)" stroke-width="12"/>
+<circle cx="60" cy="60" r="50" fill="none" stroke="#5e83a8" stroke-width="12" stroke-linecap="round" stroke-dasharray="314" stroke-dashoffset="188" transform="rotate(-90 60 60)"/>
+<text x="60" y="58" text-anchor="middle" font-size="26" font-weight="700" fill="#23304f">40%</text>
+<text x="60" y="76" text-anchor="middle" font-size="11" font-weight="600" fill="rgba(40,55,95,.6)">за день</text>
+</svg>
+<div class="summ">
+<div class="pill">Сегодня</div>
+<p style="margin-top:10px">Закрыто <b>2 из 5</b> привычек.<br>Осталось: вода, чтение, кофе.<br>Хороший темп — <b>держись!</b></p>
+</div>
+</div>
+</div>
+
+<!-- streak with drawn flame -->
+<div class="w sq">
+<div class="streakbox">
+<div class="lbl">Серия</div>
+<div class="row" style="gap:8px">
+<svg viewBox="0 0 48 64" width="40" height="54"><defs><linearGradient id="FL26" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cfe0ff"/><stop offset=".45" stop-color="#7fa8ff"/><stop offset="1" stop-color="#7e6bff"/></linearGradient></defs><path d="M24 1c5 13 17 17 13 33-2 9-8 14-13 18-5-4-11-9-13-18-2-8 3-13 5-19 1 6 4 9 7 11-3-9 1-17 1-25z" fill="url(#FL26)"/><path d="M24 30c3 6 7 9 4 17-1 4-3 6-4 8-2-3-4-5-5-9-1-5 4-8 5-16z" fill="#fff" opacity=".55"/></svg>
+<div><div class="val" style="font-size:34px">21</div><div class="lbl">дней подряд</div></div>
+</div>
+</div>
+</div>
+
+<!-- water -->
+<div class="w sq">
+<div class="water-fill" style="height:60%"></div>
+<div style="position:relative">
+<div class="row"><span class="dot" style="background:#5e83a8"></span><span class="lbl">Вода</span></div>
+<div class="val" style="margin-top:38px">1.2<span style="font-size:14px;color:rgba(40,55,95,.55)"> / 2 л</span></div>
+<div class="lbl" style="margin-top:2px">серия 4 дня</div>
+</div>
+</div>
+
+<!-- week chart -->
+<div class="w wide">
+<div class="row" style="justify-content:space-between">
+<span class="lbl">Неделя</span><span class="lbl">68% выполнено</span>
+</div>
+<div class="barrow">
+<div style="flex:1"><div class="bar" style="height:60%"></div><div class="day">П</div></div>
+<div style="flex:1"><div class="bar" style="height:80%"></div><div class="day">В</div></div>
+<div style="flex:1"><div class="bar" style="height:45%"></div><div class="day">С</div></div>
+<div style="flex:1"><div class="bar" style="height:90%"></div><div class="day">Ч</div></div>
+<div style="flex:1"><div class="bar" style="height:40%;background:linear-gradient(180deg,#5e83a8,#7fa8ff)"></div><div class="day">П</div></div>
+<div style="flex:1"><div class="bar" style="height:0%"></div><div class="day">С</div></div>
+<div style="flex:1"><div class="bar" style="height:0%"></div><div class="day">В</div></div>
+</div>
+</div>
+
+<!-- quit smoking check -->
+<div class="w sq">
+<div class="lbl"><span class="dot" style="background:#9a7aa0;display:inline-block"></span> Не курить</div>
+<div style="display:flex;justify-content:center;margin-top:14px">
+<div class="chk"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#5e83a8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4 10-11"/></svg></div>
+</div>
+<div class="lbl" style="text-align:center;margin-top:12px">Сегодня — да · серия 8</div>
+</div>
+
+<!-- coffee -->
+<div class="w sq">
+<div class="lbl"><span class="dot" style="background:#7e9667;display:inline-block"></span> Кофе</div>
+<div class="val" style="margin-top:34px">1<span style="font-size:14px;color:rgba(40,55,95,.55)"> / ≤2</span></div>
+<div class="lbl" style="margin-top:2px">в норме · серия 3</div>
+<svg viewBox="0 0 100 30" width="100%" height="26" style="margin-top:8px"><polyline points="0,20 20,14 40,18 60,8 80,12 100,6" fill="none" stroke="#7e9667" stroke-width="2.5" stroke-linecap="round"/></svg>
+</div>
+
+<!-- exercise done -->
+<div class="w wide">
+<div class="row" style="justify-content:space-between">
+<div class="row"><span class="dot" style="background:#5c9a80"></span><span class="lbl">Зарядка</span></div>
+<span class="pill" style="background:rgba(92,154,128,.22);color:#2e6b52">Готово ✓</span>
+</div>
+<div class="row" style="margin-top:12px;gap:14px">
+<svg viewBox="0 0 60 60" width="54" height="54"><circle cx="30" cy="30" r="24" fill="none" stroke="rgba(92,154,128,.2)" stroke-width="8"/><circle cx="30" cy="30" r="24" fill="none" stroke="#5c9a80" stroke-width="8" stroke-linecap="round" stroke-dasharray="151" stroke-dashoffset="0" transform="rotate(-90 30 30)"/><path d="M21 30l6 6 12-13" fill="none" stroke="#5c9a80" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<div><div class="val">14<span style="font-size:14px;color:rgba(40,55,95,.55)"> дней</span></div><div class="lbl">подряд без пропусков</div></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="tabbar">
+<div class="tab on"></div>
+<div class="tab"></div>
+<div class="tab"></div>
+<div class="tab"></div>
+</div>
+</div>
+</body>
+</html>

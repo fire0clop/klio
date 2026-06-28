@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Klio · Виджеты</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:-apple-system,Inter,system-ui,sans-serif}
+body{background:#0e0e10;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:24px}
+.phone{width:340px;height:720px;border-radius:46px;overflow:hidden;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.notch{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:110px;height:26px;background:#000;border-radius:14px;z-index:99}
+.scr{position:absolute;inset:0;overflow-y:auto;padding:56px 18px 90px;background:linear-gradient(180deg,#1a1c22 0%,#0e0f13 100%);color:#f1f2f5}
+
+.status{display:flex;justify-content:space-between;font-size:13px;font-weight:600}
+.hello{margin-top:22px}
+.hello h1{font-size:25px;font-weight:700;letter-spacing:-.5px}
+.hello .date{font-size:13px;color:#878d9b;margin-top:3px;font-weight:500}
+
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
+.w{border-radius:24px;padding:16px;position:relative;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.sq{aspect-ratio:1/1}
+.wide{grid-column:span 2}
+.big{grid-column:span 2;min-height:172px}
+
+.wtitle{font-size:12px;font-weight:600;opacity:.85;display:flex;align-items:center;gap:6px}
+.wbig{font-size:30px;font-weight:800;letter-spacing:-1px;line-height:1}
+.wsub{font-size:11px;opacity:.7;font-weight:500}
+
+/* big activity ring widget */
+.ring-w{background:linear-gradient(150deg,#23303a,#172028)}
+.ring-flex{display:flex;align-items:center;gap:18px;margin-top:10px}
+.ringsvg{width:118px;height:118px;flex:none}
+.rlegend div{font-size:12px;font-weight:600;margin-bottom:9px;display:flex;align-items:center;gap:8px}
+.rlegend .ck{width:10px;height:10px;border-radius:50%}
+
+/* streak square */
+.streak-w{background:linear-gradient(150deg,#3a2c1a,#241a10);display:flex;flex-direction:column;justify-content:space-between}
+.flame{font-size:34px}
+.streak-n{font-size:38px;font-weight:800;letter-spacing:-1.5px;line-height:1}
+
+/* water square */
+.water-w{background:linear-gradient(150deg,#1d2e3e,#13202c);display:flex;flex-direction:column;justify-content:space-between}
+.waterbar{height:7px;border-radius:4px;background:rgba(255,255,255,.14);overflow:hidden;margin-top:6px}
+.waterbar i{display:block;height:100%;width:60%;background:#5e83a8;border-radius:4px}
+
+/* mini chart wide */
+.chart-w{background:linear-gradient(150deg,#2c2436,#1c1726)}
+.bars{display:flex;align-items:flex-end;gap:7px;height:54px;margin-top:12px}
+.bars i{flex:1;background:#9a7aa0;border-radius:5px 5px 0 0;opacity:.55}
+.bars i.hl{opacity:1;background:#b78fbd}
+
+/* quick check wide */
+.check-w{background:linear-gradient(150deg,#2a3327,#1a2017);display:flex;align-items:center;justify-content:space-between}
+.checkbtn{width:46px;height:46px;border-radius:14px;flex:none;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:300}
+.yes{background:#7e9667;color:#fff}
+.no{background:rgba(255,255,255,.08);color:#9aa090}
+
+.fab{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);width:58px;height:58px;border-radius:20px;background:#f1f2f5;color:#16161a;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:300;box-shadow:0 10px 30px rgba(0,0,0,.5);z-index:50}
+</style>
+</head>
+<body>
+<div class="phone"><div class="notch"></div>
+<div class="scr">
+  <div class="status"><span>9:41</span><span>📶 🔋</span></div>
+
+  <div class="hello">
+    <h1>Добрый день</h1>
+    <div class="date">Пятница · 19 июня · 2 из 5 закрыто</div>
+  </div>
+
+  <div class="grid">
+
+    <!-- BIG: кольцо активности -->
+    <div class="w big ring-w">
+      <div class="wtitle">◎ Сводка дня</div>
+      <div class="ring-flex">
+        <svg class="ringsvg" viewBox="0 0 120 120">
+          <circle cx="60" cy="60" r="50" fill="none" stroke="rgba(92,154,128,.18)" stroke-width="11"/>
+          <circle cx="60" cy="60" r="50" fill="none" stroke="#5c9a80" stroke-width="11" stroke-linecap="round"
+                  stroke-dasharray="314" stroke-dashoffset="188" transform="rotate(-90 60 60)"/>
+          <circle cx="60" cy="60" r="36" fill="none" stroke="rgba(174,138,90,.18)" stroke-width="11"/>
+          <circle cx="60" cy="60" r="36" fill="none" stroke="#ae8a5a" stroke-width="11" stroke-linecap="round"
+                  stroke-dasharray="226" stroke-dashoffset="45" transform="rotate(-90 60 60)"/>
+          <circle cx="60" cy="60" r="22" fill="none" stroke="rgba(94,131,168,.18)" stroke-width="11"/>
+          <circle cx="60" cy="60" r="22" fill="none" stroke="#5e83a8" stroke-width="11" stroke-linecap="round"
+                  stroke-dasharray="138" stroke-dashoffset="83" transform="rotate(-90 60 60)"/>
+        </svg>
+        <div class="rlegend">
+          <div><span class="ck" style="background:#5c9a80"></span>Зарядка · готово</div>
+          <div><span class="ck" style="background:#ae8a5a"></span>Читать · 80%</div>
+          <div><span class="ck" style="background:#5e83a8"></span>Вода · 60%</div>
+          <div style="opacity:.7;font-size:11px;margin-top:2px">2 из 5 привычек закрыто</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SQUARE: серия с пламенем -->
+    <div class="w sq streak-w">
+      <div class="wtitle">🔥 Серия</div>
+      <div>
+        <div class="flame">🔥</div>
+        <div class="streak-n">21</div>
+        <div class="wsub">дней подряд</div>
+      </div>
+    </div>
+
+    <!-- SQUARE: вода -->
+    <div class="w sq water-w">
+      <div class="wtitle">💧 Вода</div>
+      <div>
+        <div class="wbig">1.2<span style="font-size:15px;opacity:.7">/2 л</span></div>
+        <div class="waterbar"><i></i></div>
+        <div class="wsub" style="margin-top:6px">🔥 4 дня</div>
+      </div>
+    </div>
+
+    <!-- WIDE: мини-график (Читать) -->
+    <div class="w wide chart-w">
+      <div style="display:flex;justify-content:space-between;align-items:baseline">
+        <div class="wtitle">📖 Читать · неделя</div>
+        <div style="font-size:12px;font-weight:700;color:#b78fbd">🔥 21</div>
+      </div>
+      <div class="bars">
+        <i style="height:55%"></i>
+        <i style="height:80%"></i>
+        <i style="height:40%"></i>
+        <i style="height:90%"></i>
+        <i style="height:70%"></i>
+        <i style="height:100%"></i>
+        <i class="hl" style="height:80%"></i>
+      </div>
+      <div class="wsub" style="margin-top:8px">Сегодня 80 / 100 стр</div>
+    </div>
+
+    <!-- WIDE: быстрый чек (Не курить) -->
+    <div class="w wide check-w">
+      <div>
+        <div class="wtitle">🚭 Не курить</div>
+        <div style="font-size:16px;font-weight:700;margin-top:6px">Воздержался сегодня?</div>
+        <div class="wsub" style="margin-top:3px">🔥 8 дней без срывов</div>
+      </div>
+      <div style="display:flex;gap:8px">
+        <div class="checkbtn no">✕</div>
+        <div class="checkbtn yes">✓</div>
+      </div>
+    </div>
+
+    <!-- SQUARE: кофе -->
+    <div class="w sq" style="background:linear-gradient(150deg,#2c3225,#1c2016);display:flex;flex-direction:column;justify-content:space-between">
+      <div class="wtitle">☕ Кофе</div>
+      <div>
+        <div class="wbig">1<span style="font-size:15px;opacity:.7">/≤2</span></div>
+        <div class="wsub" style="margin-top:4px">в норме · 🔥 3</div>
+      </div>
+    </div>
+
+    <!-- SQUARE: зарядка done -->
+    <div class="w sq" style="background:linear-gradient(150deg,#23362e,#16221c);display:flex;flex-direction:column;justify-content:space-between">
+      <div class="wtitle">🏃 Зарядка</div>
+      <div>
+        <div style="width:40px;height:40px;border-radius:50%;background:#5c9a80;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;color:#fff">✓</div>
+        <div class="wsub" style="margin-top:8px">Сделано · 🔥 14</div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<div class="fab">+</div>
+</div>
+</body>
+</html>

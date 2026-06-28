@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Klio — Mosaic Light</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:-apple-system,Inter,system-ui,sans-serif}
+body{background:#0e0e10;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:24px}
+.phone{width:340px;height:720px;border-radius:46px;overflow:hidden;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.notch{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:110px;height:26px;background:#000;border-radius:14px;z-index:99}
+.scr{position:absolute;inset:0;overflow-y:auto;padding:56px 18px 90px;background:radial-gradient(120% 80% at 0% 0%,#ffb3d9 0,transparent 50%),radial-gradient(120% 80% at 100% 6%,#a9c7ff 0,transparent 50%),radial-gradient(100% 90% at 50% 100%,#d4c2ff 0,transparent 55%),linear-gradient(160deg,#ffe1ef,#d8e6ff)}
+.scr::-webkit-scrollbar{display:none}
+.bar{display:flex;justify-content:space-between;font-size:13px;font-weight:600;color:#2b2545}
+.greet{margin-top:14px}
+.greet h1{font-size:24px;color:#2b2545;font-weight:800;letter-spacing:-.5px}
+.greet p{font-size:13px;color:#6b6388;margin-top:2px;font-weight:600}
+.w{backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);background:rgba(255,255,255,.4);border:1px solid rgba(255,255,255,.6);border-radius:28px;box-shadow:0 12px 30px rgba(120,90,160,.16);padding:16px;position:relative;overflow:hidden}
+.t{font-size:14px;font-weight:800;color:#2b2545}
+.s{font-size:12px;color:#6b6388;font-weight:600}
+.streak-mini{font-size:11px;font-weight:800;color:#8a7bff;background:rgba(138,123,255,.14);padding:3px 8px;border-radius:20px}
+.row{display:flex;align-items:center;justify-content:space-between}
+.mosaic{display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:88px;gap:13px;margin-top:16px}
+.c1{grid-column:span 1}.c2{grid-column:span 2}
+.r2{grid-row:span 2}.r3{grid-row:span 3}
+.tile{display:flex;flex-direction:column;justify-content:space-between;padding:15px}
+.liquid .wfill{position:absolute;left:0;right:0;bottom:0;height:var(--lvl,60%);background:linear-gradient(180deg,var(--c1),var(--c2));opacity:.9}
+.liquid .wfill::before{content:"";position:absolute;top:-9px;left:0;right:0;height:18px;background:var(--c1);border-radius:45%;opacity:.9}
+.liquid .content{position:relative;z-index:3;height:100%;display:flex;flex-direction:column;justify-content:space-between}
+.tap{width:48px;height:48px;border-radius:50%;border:2px solid #cdbfe0;display:flex;align-items:center;justify-content:center;font-size:22px;color:#b0a3c8;cursor:pointer;transition:.2s;flex-shrink:0}
+.tap.done{background:linear-gradient(135deg,#5c9a80,#4f9e86);border-color:transparent;color:#fff}
+.ring-wrap{display:flex;align-items:center;gap:14px}
+.summary .pillday{font-size:11px;font-weight:800;color:#8a7bff;background:rgba(255,255,255,.55);padding:4px 10px;border-radius:20px;align-self:flex-start}
+.summary h2{font-size:20px;color:#2b2545;font-weight:900}
+.flame-row{display:flex;align-items:center;gap:10px}
+.num{font-size:34px;font-weight:900;color:#2b2545;letter-spacing:-1px;line-height:1}
+.days{display:flex;gap:4px;margin-top:8px;flex-wrap:wrap}
+.pd{font-size:10px;font-weight:800;width:26px;height:26px;border-radius:9px;display:flex;align-items:center;justify-content:center}
+.pd.on{background:linear-gradient(135deg,#ff7eb3,#8a7bff);color:#fff}
+.pd.off{background:rgba(120,110,170,.15);color:#9a93b0}
+</style>
+</head>
+<body>
+<div class="phone"><div class="notch"></div><div class="scr">
+<div class="bar"><span>9:41</span><span>📶 🔋</span></div>
+<div class="greet"><h1>Добрый день</h1><p>Пятница · 19 июня</p></div>
+
+<div class="mosaic">
+<!-- summary tall left -->
+<div class="w c1 r2 tile summary">
+<span class="pillday">Сегодня</span>
+<div class="ring-wrap" style="margin:6px 0">
+<svg width="84" height="84" viewBox="0 0 110 110"><circle cx="55" cy="55" r="46" fill="none" stroke="rgba(120,110,170,.18)" stroke-width="10"/><circle cx="55" cy="55" r="46" fill="none" stroke="url(#R)" stroke-width="10" stroke-linecap="round" stroke-dasharray="289" stroke-dashoffset="173" transform="rotate(-90 55 55)"/><defs><linearGradient id="R" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff7eb3"/><stop offset="1" stop-color="#8a7bff"/></linearGradient></defs></svg>
+</div>
+<div><h2>2 из 5</h2><div class="s" style="margin-top:4px">Осталось 3 привычки. Вода, чтение и кофе ждут. Ты молодец!</div></div>
+</div>
+
+<!-- streak tall right -->
+<div class="w c1 r2 tile">
+<div class="row"><span class="t">Серия</span><span class="streak-mini">21</span></div>
+<div class="flame-row">
+<svg viewBox="0 0 48 64" width="34" height="46"><defs><linearGradient id="FL" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd36b"/><stop offset=".45" stop-color="#ff7eb3"/><stop offset="1" stop-color="#8a7bff"/></linearGradient></defs><path d="M24 1c5 13 17 17 13 33-2 9-8 14-13 18-5-4-11-9-13-18-2-8 3-13 5-19 1 6 4 9 7 11-3-9 1-17 1-25z" fill="url(#FL)"/><path d="M24 30c3 6 7 9 4 17-1 4-3 6-4 8-2-3-4-5-5-9-1-5 4-8 5-16z" fill="#fff" opacity=".55"/></svg>
+<div class="num">21</div>
+</div>
+<div class="days">
+<div class="pd on">Пн</div><div class="pd on">Вт</div><div class="pd on">Ср</div><div class="pd on">Чт</div><div class="pd on">Пт</div><div class="pd off">Сб</div><div class="pd off">Вс</div>
+</div>
+</div>
+
+<!-- water liquid wide -->
+<div class="w c2 tile liquid" style="--lvl:60%;--c1:#7fb0e0;--c2:#5e83a8;flex-direction:row;align-items:center;justify-content:space-between">
+<div class="content" style="flex-direction:row;align-items:center;justify-content:space-between;width:100%">
+<div><div class="t">💧 Вода</div><div class="s">1.2 / 2 л</div></div>
+<span class="streak-mini">4</span>
+</div>
+</div>
+
+<!-- reading liquid square -->
+<div class="w c1 r2 tile liquid" style="--lvl:80%;--c1:#c2a06b;--c2:#ae8a5a">
+<div class="wfill"></div>
+<div class="content">
+<div class="row"><span class="t">📖 Читать</span><span class="streak-mini">21</span></div>
+<div class="s">80/100 стр</div>
+</div>
+</div>
+
+<!-- charge tap square -->
+<div class="w c1 tile">
+<div class="row"><span class="t">🏃 Зарядка</span></div>
+<div class="row"><span class="s">серия 14</span><div class="tap" onclick="this.classList.toggle('done')">✓</div></div>
+</div>
+
+<!-- coffee liquid square -->
+<div class="w c1 tile liquid" style="--lvl:50%;--c1:#9bb27e;--c2:#7e9667">
+<div class="wfill"></div>
+<div class="content">
+<div class="row"><span class="t">☕ Кофе</span><span class="streak-mini">3</span></div>
+<div class="s">1 / ≤2</div>
+</div>
+</div>
+
+<!-- no-smoke tap wide -->
+<div class="w c2 tile" style="flex-direction:row;align-items:center;justify-content:space-between">
+<div><div class="t">🚭 Не курить</div><div class="s">Держись · серия 8 дней</div></div>
+<div class="tap" onclick="this.classList.toggle('done')">✓</div>
+</div>
+</div>
+</div></div>
+</body>
+</html>

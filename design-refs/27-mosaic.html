@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Klio · 27 mosaic</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:-apple-system,Inter,system-ui,sans-serif}
+body{background:#0e0e10;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:24px}
+.phone{width:340px;height:720px;border-radius:46px;overflow:hidden;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.notch{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:110px;height:26px;background:#000;border-radius:14px;z-index:99}
+.scr{position:absolute;inset:0;overflow-y:auto;padding:56px 18px 90px;
+background:radial-gradient(120% 80% at 0% 0%,#ffb3d9 0,transparent 50%),radial-gradient(120% 80% at 100% 6%,#a9c7ff 0,transparent 50%),radial-gradient(100% 90% at 50% 100%,#d4c2ff 0,transparent 55%),linear-gradient(160deg,#ffe1ef,#d8e6ff)}
+.scr::-webkit-scrollbar{display:none}
+.status{display:flex;justify-content:space-between;font-size:13px;font-weight:600;color:#2b2545}
+.hi{margin-top:18px}
+.hi h1{font-size:26px;color:#2b2545;letter-spacing:-.5px}
+.hi p{font-size:13px;color:rgba(43,37,69,.6);margin-top:4px;font-weight:500}
+.w{backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);background:rgba(255,255,255,.34);border:1px solid rgba(255,255,255,.55);border-radius:26px;box-shadow:0 10px 30px rgba(90,90,160,.16);padding:16px;position:relative;overflow:hidden}
+/* mosaic grid */
+.grid{display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:80px;gap:14px;margin-top:18px}
+.t2x2{grid-column:span 1;grid-row:span 2}
+.t1x1{grid-column:span 1;grid-row:span 1}
+.t2x1{grid-column:span 2;grid-row:span 1}
+.t1x2{grid-column:span 1;grid-row:span 2}
+.tall3{grid-column:span 1;grid-row:span 3}
+.lbl{font-size:12px;font-weight:600;color:rgba(43,37,69,.62)}
+.val{font-size:22px;font-weight:700;color:#2b2545;letter-spacing:-.5px}
+.row{display:flex;align-items:center;gap:8px}
+.dot{width:9px;height:9px;border-radius:50%;display:inline-block}
+.flex-col{display:flex;flex-direction:column;height:100%;justify-content:space-between}
+.water-fill{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(180deg,rgba(94,131,168,.3),rgba(94,131,168,.6))}
+.chk{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(154,122,160,.16);border:1.5px solid rgba(154,122,160,.4)}
+.pill{display:inline-block;font-size:11px;font-weight:600;padding:3px 9px;border-radius:20px;background:rgba(255,126,179,.22);color:#a23a6b}
+.tabbar{position:absolute;left:0;right:0;bottom:0;height:74px;background:rgba(34,24,46,.5);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);display:flex;justify-content:space-around;align-items:center;border-top:1px solid rgba(255,255,255,.14);z-index:50}
+.tab{width:24px;height:24px;border-radius:8px;opacity:.55}
+.tab.on{opacity:1;background:rgba(255,160,200,.95)}
+.barrow{display:flex;align-items:flex-end;gap:4px;height:34px;margin-top:6px}
+.bar{flex:1;border-radius:4px;background:linear-gradient(180deg,#ff9ecb,#c9a8ff)}
+</style>
+</head>
+<body>
+<div class="phone">
+<div class="notch"></div>
+<div class="scr">
+<div class="status"><span>9:41</span><span>📶 🔋</span></div>
+<div class="hi">
+<h1>Добрый день</h1>
+<p>Пятница · 19 июня · 2 из 5 закрыто</p>
+</div>
+
+<div class="grid">
+<!-- streak tall flame 1x3 -->
+<div class="w tall3">
+<div class="flex-col">
+<div class="lbl">Серия</div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:6px;margin:auto 0">
+<svg viewBox="0 0 48 64" width="58" height="78"><defs><linearGradient id="FL27" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd36b"/><stop offset=".45" stop-color="#ff7eb3"/><stop offset="1" stop-color="#8a7bff"/></linearGradient></defs><path d="M24 1c5 13 17 17 13 33-2 9-8 14-13 18-5-4-11-9-13-18-2-8 3-13 5-19 1 6 4 9 7 11-3-9 1-17 1-25z" fill="url(#FL27)"/><path d="M24 30c3 6 7 9 4 17-1 4-3 6-4 8-2-3-4-5-5-9-1-5 4-8 5-16z" fill="#fff" opacity=".55"/></svg>
+<div class="val" style="font-size:40px;line-height:1">21</div>
+<div class="lbl" style="text-align:center">дней<br>подряд</div>
+</div>
+</div>
+</div>
+
+<!-- summary ring 1x2 -->
+<div class="w t1x2">
+<div class="flex-col">
+<span class="pill">Сегодня</span>
+<svg viewBox="0 0 110 110" width="100%" height="92" style="margin:auto">
+<circle cx="55" cy="55" r="44" fill="none" stroke="rgba(255,126,179,.2)" stroke-width="11"/>
+<circle cx="55" cy="55" r="44" fill="none" stroke="#ff7eb3" stroke-width="11" stroke-linecap="round" stroke-dasharray="276" stroke-dashoffset="166" transform="rotate(-90 55 55)"/>
+<text x="55" y="52" text-anchor="middle" font-size="24" font-weight="700" fill="#2b2545">40%</text>
+<text x="55" y="70" text-anchor="middle" font-size="10" font-weight="600" fill="rgba(43,37,69,.55)">2 / 5</text>
+</svg>
+</div>
+</div>
+
+<!-- coffee small 1x1 -->
+<div class="w t1x1">
+<div class="flex-col">
+<div class="lbl"><span class="dot" style="background:#7e9667"></span> Кофе</div>
+<div class="val" style="font-size:18px">1 <span style="font-size:12px;color:rgba(43,37,69,.5)">/ ≤2</span></div>
+</div>
+</div>
+
+<!-- water 1x2 -->
+<div class="w t1x2">
+<div class="water-fill" style="height:62%"></div>
+<div class="flex-col" style="position:relative">
+<div class="lbl"><span class="dot" style="background:#5e83a8"></span> Вода</div>
+<div>
+<div class="val">1.2<span style="font-size:13px;color:rgba(43,37,69,.5)"> / 2 л</span></div>
+<div class="lbl">серия 4 дня</div>
+</div>
+</div>
+</div>
+
+<!-- quit smoking check 1x1 -->
+<div class="w t1x1">
+<div class="row" style="justify-content:space-between;height:100%">
+<div class="chk"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#9a7aa0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4 10-11"/></svg></div>
+<div style="text-align:right"><div class="lbl">Не курить</div><div class="lbl" style="color:#9a7aa0">да · 8</div></div>
+</div>
+</div>
+
+<!-- reading 2x1 wide -->
+<div class="w t2x1">
+<div class="row" style="justify-content:space-between">
+<div class="lbl"><span class="dot" style="background:#ae8a5a"></span> Читать</div>
+<div class="val" style="font-size:18px">80<span style="font-size:12px;color:rgba(43,37,69,.5)"> / 100 стр</span></div>
+</div>
+<div style="height:8px;border-radius:6px;background:rgba(174,138,90,.18);margin-top:10px;overflow:hidden"><div style="width:80%;height:100%;background:linear-gradient(90deg,#c9a36a,#ae8a5a)"></div></div>
+<div class="lbl" style="margin-top:6px">серия 21 день · почти закрыто</div>
+</div>
+
+<!-- week mini chart 1x2 -->
+<div class="w t1x2">
+<div class="flex-col">
+<div class="lbl">Неделя · 68%</div>
+<div class="barrow" style="height:auto;align-items:flex-end;flex:1;margin-top:10px">
+<div style="flex:1;height:55%"><div class="bar" style="height:55%"></div></div>
+<div style="flex:1;height:78%"><div class="bar" style="height:78%"></div></div>
+<div style="flex:1;height:42%"><div class="bar" style="height:42%"></div></div>
+<div style="flex:1;height:90%"><div class="bar" style="height:90%"></div></div>
+<div style="flex:1;height:40%"><div class="bar" style="height:40%"></div></div>
+</div>
+</div>
+</div>
+
+<!-- exercise 1x1 -->
+<div class="w t1x1">
+<div class="flex-col">
+<div class="lbl"><span class="dot" style="background:#5c9a80"></span> Зарядка</div>
+<div class="row" style="gap:6px">
+<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#5c9a80" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4 10-11"/></svg>
+<span class="val" style="font-size:16px;color:#5c9a80">Готово · 14</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="tabbar">
+<div class="tab on"></div><div class="tab"></div><div class="tab"></div><div class="tab"></div>
+</div>
+</div>
+</body>
+</html>

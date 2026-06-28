@@ -1,0 +1,49 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Klio · концепты главного экрана</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:-apple-system,Inter,system-ui,sans-serif}
+body{background:#141416;color:#fff;padding:32px 20px 80px}
+.wrap{max-width:1200px;margin:0 auto}
+h1{font-size:26px;font-weight:800}
+h2{font-size:18px;font-weight:800;margin:38px 0 4px}
+.note{color:#9a9aa0;font-size:13px;max-width:700px;margin-bottom:18px}
+p.lead{color:#9a9aa0;margin-top:6px;font-size:14px;max-width:700px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:28px}
+.cell{display:flex;flex-direction:column;align-items:center}
+.frame{width:213px;height:430px;border-radius:24px;overflow:hidden;position:relative;background:#000}
+iframe{width:388px;height:768px;border:0;transform:scale(.55);transform-origin:top left;position:absolute;top:0;left:0;pointer-events:none}
+.lab{margin-top:12px;text-align:center}.lab b{font-size:14px;font-weight:700}.lab span{display:block;font-size:12px;color:#8a8a90;margin-top:2px}
+a.open{font-size:11px;color:#8fe3b5;text-decoration:none;margin-top:6px;display:inline-block}
+.num{position:absolute;top:8px;left:8px;background:rgba(0,0,0,.55);color:#fff;font-size:11px;font-weight:700;padding:3px 8px;border-radius:20px;z-index:5}
+.hot .num{background:linear-gradient(135deg,#ff7eb3,#8a7bff)}
+.star .num{background:#3a3550}
+</style></head><body><div class=wrap>
+<h1>Klio · концепты главного экрана</h1>
+<p class=lead>Открой понравившиеся в полном размере и скажи номера фаворитов (можно по кусочкам: «сводка из 45, заливка из 42, серия из 46»).</p>
+
+<h2>★★ Узкое направление · светлое стекло + заливка блоков + быстрый тап + серия с днями</h2>
+<div class=note>По последнему уточнению: светлый фон (как 29/30), виджет серии с днями недели, заливка блока жидкостью + перелив при переборе, быстрая отметка тапом, карточка-сводка с кольцом и текстом. 20 вариаций.</div>
+<div class="grid" id=g3></div>
+
+<h2>★ Розово-голубое стекло + виджеты + нарисованный огонёк (21–40)</h2>
+<div class="grid" id=g2></div>
+
+<h2>Первая партия · 20 разных концептов (01–20)</h2>
+<div class="grid" id=g1></div>
+</div>
+<script>
+const narrowed=[
+["41","Narrowed Base","эталон узкого направления"],["42","Liquid Focus","всё на заливках-жидкостях"],["43","Overflow","перебор: кофе выливается"],["44","Tap First","крупные тап-чекбоксы"],["45","Summary Hero","большая сводка-герой"],
+["46","Streak Hero","серия с днями — герой"],["47","Mosaic Light","асимметричная мозаика"],["48","Pink Light","розовая монохромная"],["49","Blue Light","голубая монохромная"],["50","Dense Light","плотная инфо-доска"],
+["51","Bubbly Light","пухлые пузырьковые виджеты"],["52","Stacked Light","вертикальный стек карточек"],["53","Ring Grid","упор на кольца"],["54","Minimal Light","минимализм, воздух"],["55","Tall","высокие колонки"],
+["56","Banner Light","баннер-герой + сетка"],["57","Fill Bars","горизонтальные fill-полосы"],["58","Waves","волновая жидкость"],["59","Calm Soft","мягкая приглушённая пастель"],["60","Data Light","светлая аналитика"]];
+const refined=[
+["21","Glass Base","эталон стекла"],["22","Glass Dark","тёмное стекло"],["23","Flame Hero","огонёк-герой"],["24","Flame Center","огонёк в центре"],["25","Pink Mono","розовая гамма"],["26","Blue Mono","голубая гамма"],["27","Mosaic","мозаика"],["28","Rings Flame","кольца + огонёк"],["29","Bubbly","пухлые виджеты"],["30","Dense","инфо-доска"],["31","Stacked","стек широких"],["32","Color Bleed","протекание цвета"],["33","Minimal","минимализм"],["34","Neon Glass","стекло + неон"],["35","Gradient Border","градиентные обводки"],["36","Flame Ring","огонёк в кольце"],["37","Candy","карамель"],["38","Holo","голография"],["39","Hero Banner","баннер-герой"],["40","Layered","слоистость"]];
+const first=[
+["01","Heatmap","клетки-дни"],["02","Activity Rings","кольца Fitness"],["03","Hero Number","крупный %"],["04","Timeline","лента дня"],["05","Card Stack","свайп-карточки"],["06","Bento","плитки"],["07","Progress Bars","линейные бары"],["08","Dial","циферблат"],["09","Garden","растения"],["10","Dashboard","аналитика"],["11","Editorial","типографика"],["12","Neon","тёмный неон"],["13","Journal","дневник"],["14","Segments","капсулы дней"],["15","Journey","карта-путь"],["16","Checklist","чек-лист"],["17","Widgets","iOS-виджеты"],["18","Glass","стекло"],["19","Brutalist","брутализм"],["20","Streak","геймификация"]];
+const files={"01":"01-heatmap","02":"02-rings","03":"03-hero-number","04":"04-timeline","05":"05-cardstack","06":"06-bento","07":"07-progressbars","08":"08-dial","09":"09-garden","10":"10-dashboard","11":"11-editorial","12":"12-neon","13":"13-journal","14":"14-segments","15":"15-journey","16":"16-checklist","17":"17-widgets","18":"18-glass","19":"19-brutalist","20":"20-streak","21":"21-glass-base","22":"22-glass-dark","23":"23-flame-hero","24":"24-flame-center","25":"25-pink-mono","26":"26-blue-mono","27":"27-mosaic","28":"28-rings-flame","29":"29-bubbly","30":"30-dense","31":"31-stacked","32":"32-colorbleed","33":"33-minimal","34":"34-neon-glass","35":"35-gradient-border","36":"36-flame-ring","37":"37-candy","38":"38-holo","39":"39-hero-banner","40":"40-layered","41":"41-narrowed-base","42":"42-liquid-focus","43":"43-overflow","44":"44-tap-first","45":"45-summary-hero","46":"46-streak-hero","47":"47-mosaic-light","48":"48-pink-light","49":"49-blue-light","50":"50-dense-light","51":"51-bubbly-light","52":"52-stacked-light","53":"53-ring-grid","54":"54-minimal-light","55":"55-tall","56":"56-banner-light","57":"57-fill-bars","58":"58-waves","59":"59-calm-soft","60":"60-data-light"};
+function render(arr,el,cls){arr.forEach(([n,t,d])=>{const f=files[n]+'.html';el.insertAdjacentHTML('beforeend',`<div class="cell ${cls}"><div class=frame><span class=num>${n}</span><iframe src="${f}" scrolling="no"></iframe></div><div class=lab><b>${t}</b><span>${d}</span><a class=open href="${f}" target="_blank">открыть →</a></div></div>`);});}
+render(narrowed,document.getElementById('g3'),'hot');
+render(refined,document.getElementById('g2'),'star');
+render(first,document.getElementById('g1'),'');
+</script></body></html>

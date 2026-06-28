@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Klio · flame-center</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:-apple-system,Inter,system-ui,sans-serif}
+body{background:#0e0e10;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:24px}
+.phone{width:340px;height:720px;border-radius:46px;overflow:hidden;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.notch{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:110px;height:26px;background:#000;border-radius:14px;z-index:99}
+.scr{position:absolute;inset:0;overflow-y:auto;padding:56px 18px 90px;color:#2b2545;
+background:radial-gradient(120% 80% at 0% 0%,#ffb3d9 0,transparent 50%),radial-gradient(120% 80% at 100% 6%,#a9c7ff 0,transparent 50%),radial-gradient(100% 90% at 50% 100%,#d4c2ff 0,transparent 55%),linear-gradient(160deg,#ffe1ef,#d8e6ff)}
+.scr::-webkit-scrollbar{display:none}
+.status{display:flex;justify-content:space-between;font-size:13px;font-weight:600}
+.hi{font-size:27px;font-weight:800;letter-spacing:-.5px;margin-top:18px}
+.sub{font-size:13px;color:rgba(43,37,69,.6);margin-top:3px;font-weight:500}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.w{backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);background:rgba(255,255,255,.34);border:1px solid rgba(255,255,255,.55);border-radius:26px;box-shadow:0 10px 30px rgba(90,90,160,.16);padding:16px;position:relative;overflow:hidden}
+.sq{aspect-ratio:1/1}
+.wide{grid-column:span 2}
+.flamebig{grid-column:span 2;aspect-ratio:1/.82;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 38%,rgba(255,200,225,.6),rgba(200,210,255,.35));overflow:visible}
+.flame-glow{position:absolute;top:30%;left:50%;transform:translate(-50%,-50%);width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(255,126,179,.5),transparent 65%);filter:blur(10px)}
+.flame-num{font-size:46px;font-weight:900;letter-spacing:-2px;line-height:1;margin-top:6px;background:linear-gradient(135deg,#ff7eb3,#8a7bff);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.flame-lbl{font-size:13px;font-weight:600;color:rgba(43,37,69,.6);position:relative;z-index:2}
+.wlabel{font-size:12px;font-weight:600;color:rgba(43,37,69,.55);display:flex;align-items:center;gap:6px}
+.wbig{font-size:22px;font-weight:800;letter-spacing:-.5px;margin-top:2px}
+.wbig small{font-size:13px;font-weight:600;color:rgba(43,37,69,.5)}
+.ico{font-size:18px}
+.water-tube{margin-top:10px;height:42px;border-radius:13px;background:rgba(94,131,168,.16);position:relative;overflow:hidden}
+.water-fill{position:absolute;bottom:0;left:0;right:0;height:60%;background:linear-gradient(180deg,#8fb4d8,#5e83a8)}
+.check{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#74b89a,#5c9a80);display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px;margin-top:8px;box-shadow:0 6px 16px rgba(92,154,128,.4)}
+.yn{display:flex;gap:8px;margin-top:10px}
+.yn button{flex:1;border:none;border-radius:13px;padding:8px 0;font-size:13px;font-weight:700;cursor:pointer}
+.yes{background:linear-gradient(135deg,#b39bc4,#9a7aa0);color:#fff}
+.no{background:rgba(255,255,255,.5);color:#2b2545}
+.coffee-dots{display:flex;gap:6px;margin-top:12px}
+.dot{width:20px;height:20px;border-radius:50%;background:rgba(126,150,103,.2);border:2px solid rgba(126,150,103,.4)}
+.dot.on{background:#7e9667;border-color:#7e9667}
+.bars{display:flex;align-items:flex-end;gap:6px;height:42px;margin-top:12px}
+.bar{flex:1;border-radius:5px 5px 2px 2px;background:linear-gradient(180deg,#caa06a,#ae8a5a)}
+.tabbar{position:absolute;bottom:0;left:0;right:0;height:74px;backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);background:rgba(255,255,255,.45);border-top:1px solid rgba(255,255,255,.6);display:flex;align-items:center;justify-content:space-around;padding-bottom:14px}
+.tab{font-size:22px;opacity:.4}
+.tab.act{opacity:1}
+</style>
+</head>
+<body>
+<div class="phone">
+<div class="notch"></div>
+<div class="scr">
+<div class="status"><span>9:41</span><span>📶 🔋</span></div>
+<div class="hi">Добрый день</div>
+<div class="sub">Пятница · 19 июня · 2 из 5 закрыто</div>
+
+<div class="grid">
+<!-- зарядка -->
+<div class="w sq">
+<div class="wlabel"><span class="ico">🏃</span>Зарядка</div>
+<div class="check">✓</div>
+<div class="sub" style="margin-top:8px">Серия 14</div>
+</div>
+<!-- вода -->
+<div class="w sq">
+<div class="wlabel"><span class="ico">💧</span>Вода</div>
+<div class="wbig">1.2<small> / 2 л</small></div>
+<div class="water-tube"><div class="water-fill"></div></div>
+</div>
+
+<!-- BIG flame center -->
+<div class="w flamebig">
+<div class="flame-glow"></div>
+<svg viewBox="0 0 48 64" width="92" height="122" style="position:relative;z-index:2;filter:drop-shadow(0 10px 24px rgba(255,126,179,.5))"><defs><linearGradient id="FLC" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd36b"/><stop offset=".45" stop-color="#ff7eb3"/><stop offset="1" stop-color="#8a7bff"/></linearGradient></defs><path d="M24 1c5 13 17 17 13 33-2 9-8 14-13 18-5-4-11-9-13-18-2-8 3-13 5-19 1 6 4 9 7 11-3-9 1-17 1-25z" fill="url(#FLC)"/><path d="M24 30c3 6 7 9 4 17-1 4-3 6-4 8-2-3-4-5-5-9-1-5 4-8 5-16z" fill="#fff" opacity=".55"/></svg>
+<div class="flame-num">21</div>
+<div class="flame-lbl">дней серии подряд</div>
+</div>
+
+<!-- не курить -->
+<div class="w sq">
+<div class="wlabel"><span class="ico">🚭</span>Не курить</div>
+<div class="sub" style="margin-top:6px">Серия 8</div>
+<div class="yn"><button class="yes">Да</button><button class="no">Нет</button></div>
+</div>
+<!-- кофе -->
+<div class="w sq">
+<div class="wlabel"><span class="ico">☕</span>Кофе</div>
+<div class="wbig" style="font-size:18px">1<small> / ≤2</small></div>
+<div class="coffee-dots"><span class="dot on"></span><span class="dot"></span></div>
+</div>
+
+<!-- читать -->
+<div class="w wide">
+<div class="wlabel"><span class="ico">📖</span>Читать · 80/100 стр</div>
+<div class="bars">
+<div class="bar" style="height:40%"></div>
+<div class="bar" style="height:65%"></div>
+<div class="bar" style="height:50%"></div>
+<div class="bar" style="height:80%"></div>
+<div class="bar" style="height:70%"></div>
+<div class="bar" style="height:90%"></div>
+<div class="bar" style="height:80%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="tabbar"><span class="tab act">🏠</span><span class="tab">📊</span><span class="tab">➕</span><span class="tab">👤</span></div>
+</div>
+</body>
+</html>

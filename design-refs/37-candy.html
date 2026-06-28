@@ -1,0 +1,35 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><title>37 · Candy</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:-apple-system,Inter,system-ui,sans-serif}
+body{background:#0e0e10;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:24px}
+.phone{width:340px;height:720px;border-radius:46px;overflow:hidden;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.notch{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:110px;height:26px;background:#000;border-radius:14px;z-index:99}
+.scr{position:absolute;inset:0;overflow-y:auto;padding:56px 18px 90px;color:#4a2f55;
+background:radial-gradient(120% 80% at 0% 0%,#ffc1e3 0,transparent 52%),radial-gradient(120% 80% at 100% 4%,#bcd4ff 0,transparent 50%),radial-gradient(110% 90% at 50% 105%,#e0c8ff 0,transparent 55%),linear-gradient(160deg,#ffe7f4,#e6efff)}
+.sb{display:flex;justify-content:space-between;font-size:13px;font-weight:600}
+.h1{font-size:25px;font-weight:800;margin-top:20px}.date{font-size:13px;color:#8a6f95;margin-top:3px;font-weight:500}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.w{backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);background:rgba(255,255,255,.45);border:1.5px solid rgba(255,255,255,.7);border-radius:32px;box-shadow:0 12px 28px rgba(180,120,180,.18);padding:17px;position:relative;overflow:hidden}
+.sq{aspect-ratio:1/1}.wide{grid-column:span 2}.big{grid-column:span 2}
+.wt{font-size:12px;font-weight:700;opacity:.7;display:flex;align-items:center;gap:6px}
+.wbig{font-size:28px;font-weight:800;letter-spacing:-1px;line-height:1}.wsub{font-size:11px;opacity:.65;font-weight:600}
+.col{display:flex;flex-direction:column;justify-content:space-between;height:100%}
+.bar{height:9px;border-radius:6px;background:rgba(180,140,190,.2);overflow:hidden;margin-top:8px}.bar i{display:block;height:100%;border-radius:6px}
+.chk{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:20px}
+.flamewrap{display:flex;align-items:center;gap:12px}
+</style></head><body><div class=phone><div class=notch></div><div class=scr>
+<div class=sb><span>9:41</span><span>📶 🔋</span></div>
+<div class=h1>Добрый день 🍬</div><div class=date>Пятница · 19 июня · 2 из 5 закрыто</div>
+<div class=grid>
+<div class="w big col"><div class=wt>◎ Сводка дня</div>
+<div class=flamewrap><svg viewBox="0 0 48 64" width=54 height=72><defs><linearGradient id=FL x1=0 y1=0 x2=0 y2=1><stop offset=0 stop-color=#ffd9a0/><stop offset=.45 stop-color=#ff9ecf/><stop offset=1 stop-color=#9d8bff/></linearGradient></defs><path d="M24 1c5 13 17 17 13 33-2 9-8 14-13 18-5-4-11-9-13-18-2-8 3-13 5-19 1 6 4 9 7 11-3-9 1-17 1-25z" fill="url(#FL)"/><path d="M24 30c3 6 7 9 4 17-1 4-3 6-4 8-2-3-4-5-5-9-1-5 4-8 5-16z" fill=#fff opacity=.6/></svg>
+<div><div style="font-size:34px;font-weight:800;line-height:1">21</div><div class=wsub>дней подряд · так держать</div>
+<div style="display:flex;gap:6px;margin-top:10px">
+<span style="background:#5c9a80;width:22px;height:8px;border-radius:4px;display:inline-block"></span><span style="background:#ae8a5a;width:22px;height:8px;border-radius:4px;display:inline-block"></span><span style="background:rgba(180,140,190,.3);width:22px;height:8px;border-radius:4px;display:inline-block"></span><span style="background:rgba(180,140,190,.3);width:22px;height:8px;border-radius:4px;display:inline-block"></span><span style="background:rgba(180,140,190,.3);width:22px;height:8px;border-radius:4px;display:inline-block"></span></div></div></div></div>
+<div class="w sq col"><div class=wt>🏃 Зарядка</div><div><div class=chk style="background:#5c9a80">✓</div><div class=wsub style="margin-top:8px">сделано · 14</div></div></div>
+<div class="w sq col"><div class=wt>💧 Вода</div><div><div class=wbig>1.2<span style="font-size:14px;opacity:.6">/2 л</span></div><div class=bar><i style="width:60%;background:#5e83a8"></i></div><div class=wsub style="margin-top:6px">серия 4</div></div></div>
+<div class="w sq col"><div class=wt>📖 Читать</div><div><div class=wbig>80<span style="font-size:14px;opacity:.6">/100</span></div><div class=bar><i style="width:80%;background:#ae8a5a"></i></div><div class=wsub style="margin-top:6px">серия 21</div></div></div>
+<div class="w sq col"><div class=wt>☕ Кофе</div><div><div class=wbig>1<span style="font-size:14px;opacity:.6">/≤2</span></div><div class=wsub style="margin-top:4px">в норме · 3</div></div></div>
+<div class="w wide" style="display:flex;align-items:center;justify-content:space-between"><div><div class=wt>🚭 Не курить</div><div style="font-size:15px;font-weight:700;margin-top:6px">Воздержался сегодня?</div><div class=wsub style="margin-top:2px">серия 8 дней</div></div>
+<div style="display:flex;gap:8px"><div class=chk style="background:rgba(180,140,190,.2);color:#9a7aa0">✕</div><div class=chk style="background:#9a7aa0">✓</div></div></div>
+</div></div></div></body></html>

@@ -1,0 +1,29 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><title>02 · Rings</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:-apple-system,Inter,system-ui,sans-serif}
+body{background:#0e0e10;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:24px}
+.phone{width:340px;height:720px;border-radius:46px;background:#000;overflow:hidden;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.notch{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:110px;height:26px;background:#000;border-radius:14px;z-index:99}
+.scr{position:absolute;inset:0;overflow-y:auto;padding:56px 20px 90px;background:#000;color:#fff}
+.sb{display:flex;justify-content:space-between;font-size:13px;font-weight:600;margin-bottom:14px}
+.h1{font-size:30px;font-weight:800;margin-bottom:2px}.sub{color:#7d7d82;font-size:14px;margin-bottom:22px}
+.bigring{width:200px;height:200px;border-radius:50%;margin:0 auto 26px;position:relative;
+background:conic-gradient(#ff375f 280deg,#3a1620 0);display:flex;align-items:center;justify-content:center}
+.bigring::before{content:"";position:absolute;width:152px;height:152px;border-radius:50%;background:conic-gradient(#a6ff00 230deg,#23300a 0)}
+.bigring::after{content:"";position:absolute;width:104px;height:104px;border-radius:50%;background:conic-gradient(#00e5ff 200deg,#0a2730 0)}
+.bigtxt{position:absolute;text-align:center;z-index:2}.bigtxt b{font-size:30px}.bigtxt span{font-size:12px;color:#7d7d82;display:block}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tile{background:#1c1c1e;border-radius:20px;padding:16px}
+.miniring{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.miniring i{width:34px;height:34px;border-radius:50%;background:#1c1c1e;display:flex;align-items:center;justify-content:center;font-style:normal;font-size:16px}
+.tile b{font-size:15px;display:block}.tile span{font-size:12px;color:#7d7d82}
+</style></head><body><div class=phone><div class=notch></div><div class=scr>
+<div class=sb><span>9:41</span><span>📶 🔋</span></div>
+<div class=h1>Сегодня</div><div class=sub>2 из 5 закрыто</div>
+<div class=bigring><div class=bigtxt><b>40%</b><span>дня</span></div></div>
+<div class=grid>
+<div class=tile><div class=miniring style="background:conic-gradient(#5c9a80 360deg,#23300a 0)"><i>🏃</i></div><b>Зарядка</b><span>готово</span></div>
+<div class=tile><div class=miniring style="background:conic-gradient(#ae8a5a 288deg,#3a3326 0)"><i>📖</i></div><b>Читать</b><span>80/100</span></div>
+<div class=tile><div class=miniring style="background:conic-gradient(#5e83a8 216deg,#1a2633 0)"><i>💧</i></div><b>Вода</b><span>1.2/2 л</span></div>
+<div class=tile><div class=miniring style="background:conic-gradient(#9a7aa0 0deg,#2a2330 0)"><i>🚭</i></div><b>Не курить</b><span>отметить</span></div>
+</div></div></div></body></html>

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Klio · Stacked</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:-apple-system,Inter,system-ui,sans-serif}
+body{background:#0e0e10;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:24px}
+.phone{width:340px;height:720px;border-radius:46px;overflow:hidden;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.notch{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:110px;height:26px;background:#000;border-radius:14px;z-index:99}
+.scr{position:absolute;inset:0;overflow-y:auto;padding:56px 18px 90px;
+background:radial-gradient(120% 80% at 0% 0%,#ffb3d9 0,transparent 50%),radial-gradient(120% 80% at 100% 6%,#a9c7ff 0,transparent 50%),radial-gradient(100% 90% at 50% 100%,#d4c2ff 0,transparent 55%),linear-gradient(160deg,#ffe1ef,#d8e6ff)}
+.sbar{display:flex;justify-content:space-between;font-size:13px;font-weight:600;color:#2b2545}
+.hello{margin-top:18px}
+.hello h1{font-size:26px;font-weight:800;color:#2b2545;letter-spacing:-.5px}
+.hello p{font-size:13px;color:rgba(43,37,69,.6);margin-top:4px;font-weight:600}
+.stack{display:flex;flex-direction:column;gap:14px;margin-top:18px}
+.w{backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);background:rgba(255,255,255,.34);border:1px solid rgba(255,255,255,.55);border-radius:26px;box-shadow:0 10px 30px rgba(90,90,160,.16);padding:16px;position:relative;overflow:hidden}
+.row{display:flex;align-items:center;gap:14px}
+.tag{width:46px;height:46px;border-radius:15px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#fff;font-size:20px}
+.t-name{font-size:16px;font-weight:700;color:#2b2545}
+.t-sub{font-size:12px;color:rgba(43,37,69,.55);font-weight:600;margin-top:2px}
+.spacer{flex:1}
+.pct{font-size:15px;font-weight:800;color:#2b2545}
+.bar{height:10px;border-radius:8px;background:rgba(43,37,69,.1);margin-top:14px;overflow:hidden}
+.fill{height:100%;border-radius:8px}
+/* streak ring */
+.ring-wrap{display:flex;align-items:center;gap:16px}
+.streak-num{font-size:40px;font-weight:900;color:#2b2545;line-height:1}
+.streak-lbl{font-size:12px;font-weight:700;color:rgba(43,37,69,.55);margin-top:2px}
+.dots{display:flex;gap:6px;margin-top:12px}
+.dot{flex:1;height:34px;border-radius:9px;background:rgba(43,37,69,.08);display:flex;align-items:flex-end;justify-content:center;font-size:9px;color:rgba(43,37,69,.45);font-weight:700;padding-bottom:3px}
+.dot.on{background:linear-gradient(180deg,#ff9ecb,#a9c7ff)}
+.dot.on span{color:#fff}
+.water-cup{display:flex;gap:6px;margin-top:14px}
+.cup{flex:1;height:42px;border-radius:11px;border:1.5px solid rgba(94,131,168,.4);position:relative;overflow:hidden}
+.cup.full{background:linear-gradient(180deg,#7fb0e0,#5e83a8)}
+.checkbox{width:30px;height:30px;border-radius:10px;border:2px solid #9a7aa0;display:flex;align-items:center;justify-content:center}
+.checkbox.done{background:#9a7aa0}
+.tabbar{position:absolute;left:0;right:0;bottom:0;height:74px;background:rgba(20,18,30,.82);backdrop-filter:blur(20px);display:flex;justify-content:space-around;align-items:center;border-top:1px solid rgba(255,255,255,.08);z-index:50}
+.tb{width:40px;height:40px;border-radius:13px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.5)}
+.tb.act{background:linear-gradient(135deg,#ff9ecb,#a9c7ff);color:#fff}
+</style>
+</head>
+<body>
+<div class="phone"><div class="notch"></div>
+<div class="scr">
+  <div class="sbar"><span>9:41</span><span>📶 🔋</span></div>
+  <div class="hello">
+    <h1>Добрый день</h1>
+    <p>Пятница · 19 июня · 2 из 5 закрыто</p>
+  </div>
+
+  <div class="stack">
+    <!-- Streak widget with drawn flame -->
+    <div class="w">
+      <div class="ring-wrap">
+        <svg viewBox="0 0 48 64" width="44" height="58"><defs><linearGradient id="FL31" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd36b"/><stop offset=".45" stop-color="#ff7eb3"/><stop offset="1" stop-color="#8a7bff"/></linearGradient></defs><path d="M24 1c5 13 17 17 13 33-2 9-8 14-13 18-5-4-11-9-13-18-2-8 3-13 5-19 1 6 4 9 7 11-3-9 1-17 1-25z" fill="url(#FL31)"/><path d="M24 30c3 6 7 9 4 17-1 4-3 6-4 8-2-3-4-5-5-9-1-5 4-8 5-16z" fill="#fff" opacity=".55"/></svg>
+        <div>
+          <div class="streak-num">21</div>
+          <div class="streak-lbl">дней подряд</div>
+        </div>
+        <div class="spacer"></div>
+      </div>
+      <div class="dots">
+        <div class="dot on"><span>Пн</span></div><div class="dot on"><span>Вт</span></div><div class="dot on"><span>Ср</span></div><div class="dot on"><span>Чт</span></div><div class="dot on"><span>Пт</span></div><div class="dot"><span>Сб</span></div><div class="dot"><span>Вс</span></div>
+      </div>
+    </div>
+
+    <!-- Зарядка -->
+    <div class="w">
+      <div class="row">
+        <div class="tag" style="background:#5c9a80">🏃</div>
+        <div><div class="t-name">Зарядка</div><div class="t-sub">серия 14 дней</div></div>
+        <div class="spacer"></div>
+        <div class="checkbox done" style="border-color:#5c9a80;background:#5c9a80"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      </div>
+    </div>
+
+    <!-- Читать -->
+    <div class="w">
+      <div class="row">
+        <div class="tag" style="background:#ae8a5a">📖</div>
+        <div><div class="t-name">Читать</div><div class="t-sub">80 из 100 стр · серия 21</div></div>
+        <div class="spacer"></div>
+        <div class="pct">80%</div>
+      </div>
+      <div class="bar"><div class="fill" style="width:80%;background:linear-gradient(90deg,#caa06a,#ae8a5a)"></div></div>
+    </div>
+
+    <!-- Вода -->
+    <div class="w">
+      <div class="row">
+        <div class="tag" style="background:#5e83a8">💧</div>
+        <div><div class="t-name">Вода</div><div class="t-sub">1.2 из 2 л · серия 4</div></div>
+        <div class="spacer"></div>
+        <div class="pct">60%</div>
+      </div>
+      <div class="water-cup">
+        <div class="cup full"></div><div class="cup full"></div><div class="cup full"></div><div class="cup"></div><div class="cup"></div>
+      </div>
+    </div>
+
+    <!-- Не курить -->
+    <div class="w">
+      <div class="row">
+        <div class="tag" style="background:#9a7aa0">🚭</div>
+        <div><div class="t-name">Не курить</div><div class="t-sub">серия 8 дней · держись</div></div>
+        <div class="spacer"></div>
+        <div class="checkbox done"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      </div>
+    </div>
+
+    <!-- Кофе -->
+    <div class="w">
+      <div class="row">
+        <div class="tag" style="background:#7e9667">☕</div>
+        <div><div class="t-name">Кофе</div><div class="t-sub">1 из ≤2 чашек · серия 3</div></div>
+        <div class="spacer"></div>
+        <div class="pct">в норме</div>
+      </div>
+      <div class="bar"><div class="fill" style="width:50%;background:linear-gradient(90deg,#9bb47e,#7e9667)"></div></div>
+    </div>
+  </div>
+</div>
+<div class="tabbar">
+  <div class="tb act"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3 11l9-8 9 8v9a2 2 0 01-2 2h-4v-6h-6v6H5a2 2 0 01-2-2z"/></svg></div>
+  <div class="tb"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M3 10h18M8 2v4M16 2v4"/></svg></div>
+  <div class="tb"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V9M10 19V5M16 19v-7M20 19h-1"/></svg></div>
+  <div class="tb"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div>
+</div>
+</div>
+</body>
+</html>

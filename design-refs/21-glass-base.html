@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Klio · glass-base</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:-apple-system,Inter,system-ui,sans-serif}
+body{background:#0e0e10;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:24px}
+.phone{width:340px;height:720px;border-radius:46px;overflow:hidden;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.notch{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:110px;height:26px;background:#000;border-radius:14px;z-index:99}
+.scr{position:absolute;inset:0;overflow-y:auto;padding:56px 18px 90px;color:#2b2545;
+background:radial-gradient(120% 80% at 0% 0%,#ffb3d9 0,transparent 50%),radial-gradient(120% 80% at 100% 6%,#a9c7ff 0,transparent 50%),radial-gradient(100% 90% at 50% 100%,#d4c2ff 0,transparent 55%),linear-gradient(160deg,#ffe1ef,#d8e6ff)}
+.scr::-webkit-scrollbar{display:none}
+.status{display:flex;justify-content:space-between;font-size:13px;font-weight:600}
+.hero-head{margin-top:18px}
+.hi{font-size:27px;font-weight:800;letter-spacing:-.5px}
+.sub{font-size:13px;color:rgba(43,37,69,.6);margin-top:3px;font-weight:500}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.w{backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);background:rgba(255,255,255,.34);border:1px solid rgba(255,255,255,.55);border-radius:26px;box-shadow:0 10px 30px rgba(90,90,160,.16);padding:16px;position:relative;overflow:hidden}
+.sq{aspect-ratio:1/1}
+.wide{grid-column:span 2}
+.big{grid-column:span 2;min-height:170px}
+.wlabel{font-size:12px;font-weight:600;color:rgba(43,37,69,.55);display:flex;align-items:center;gap:6px}
+.wbig{font-size:24px;font-weight:800;letter-spacing:-.5px;margin-top:2px}
+.wbig small{font-size:13px;font-weight:600;color:rgba(43,37,69,.5)}
+.ico{font-size:18px}
+.ring-row{display:flex;align-items:center;gap:18px}
+.ring-info h2{font-size:20px;font-weight:800;letter-spacing:-.4px}
+.ring-info p{font-size:13px;color:rgba(43,37,69,.6);font-weight:500;margin-top:4px;line-height:1.4}
+.pill{display:inline-block;margin-top:10px;font-size:11px;font-weight:700;padding:5px 11px;border-radius:20px;background:rgba(255,255,255,.5);color:#2b2545}
+.streak-num{font-size:40px;font-weight:900;letter-spacing:-2px;line-height:1}
+.bars{display:flex;align-items:flex-end;gap:7px;height:54px;margin-top:14px}
+.bar{flex:1;border-radius:6px 6px 3px 3px;background:linear-gradient(180deg,#caa06a,#ae8a5a)}
+.days{display:flex;justify-content:space-between;font-size:9px;color:rgba(43,37,69,.45);margin-top:6px;font-weight:600}
+.water-tube{margin-top:12px;height:54px;border-radius:14px;background:rgba(94,131,168,.16);position:relative;overflow:hidden}
+.water-fill{position:absolute;bottom:0;left:0;right:0;height:60%;background:linear-gradient(180deg,#8fb4d8,#5e83a8);border-radius:0 0 14px 14px}
+.check{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#74b89a,#5c9a80);display:flex;align-items:center;justify-content:center;color:#fff;font-size:22px;margin-top:10px;box-shadow:0 6px 16px rgba(92,154,128,.4)}
+.yn{display:flex;gap:8px;margin-top:12px}
+.yn button{flex:1;border:none;border-radius:14px;padding:9px 0;font-size:13px;font-weight:700;cursor:pointer}
+.yes{background:linear-gradient(135deg,#b39bc4,#9a7aa0);color:#fff}
+.no{background:rgba(255,255,255,.5);color:#2b2545}
+.coffee-dots{display:flex;gap:6px;margin-top:14px}
+.dot{width:22px;height:22px;border-radius:50%;background:rgba(126,150,103,.2);border:2px solid rgba(126,150,103,.4)}
+.dot.on{background:#7e9667;border-color:#7e9667}
+.tabbar{position:absolute;bottom:0;left:0;right:0;height:74px;backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);background:rgba(255,255,255,.45);border-top:1px solid rgba(255,255,255,.6);display:flex;align-items:center;justify-content:space-around;padding-bottom:14px}
+.tab{font-size:22px;opacity:.4}
+.tab.act{opacity:1}
+</style>
+</head>
+<body>
+<div class="phone">
+<div class="notch"></div>
+<div class="scr">
+<div class="status"><span>9:41</span><span>📶 🔋</span></div>
+
+<div class="hero-head">
+<div class="hi">Добрый день</div>
+<div class="sub">Пятница · 19 июня · 2 из 5 закрыто</div>
+</div>
+
+<div class="grid">
+<!-- big day ring -->
+<div class="w big">
+<div class="ring-row">
+<svg width="100" height="100" viewBox="0 0 100 100">
+<circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="9"/>
+<circle cx="50" cy="50" r="42" fill="none" stroke="url(#g1)" stroke-width="9" stroke-linecap="round" stroke-dasharray="264" stroke-dashoffset="105" transform="rotate(-90 50 50)"/>
+<defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff7eb3"/><stop offset="1" stop-color="#7e9cff"/></linearGradient></defs>
+<text x="50" y="47" text-anchor="middle" font-size="22" font-weight="800" fill="#2b2545">40%</text>
+<text x="50" y="64" text-anchor="middle" font-size="9" font-weight="600" fill="rgba(43,37,69,.5)">за день</text>
+</svg>
+<div class="ring-info">
+<h2>Сегодня</h2>
+<p>2 из 5 привычек<br>закрыто. Ещё чуть-чуть!</p>
+<span class="pill">3 осталось</span>
+</div>
+</div>
+</div>
+
+<!-- streak with flame -->
+<div class="w sq">
+<div class="wlabel">Серия</div>
+<div style="display:flex;align-items:center;gap:8px;margin-top:8px">
+<svg viewBox="0 0 48 64" width="34" height="46"><defs><linearGradient id="FL" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd36b"/><stop offset=".45" stop-color="#ff7eb3"/><stop offset="1" stop-color="#8a7bff"/></linearGradient></defs><path d="M24 1c5 13 17 17 13 33-2 9-8 14-13 18-5-4-11-9-13-18-2-8 3-13 5-19 1 6 4 9 7 11-3-9 1-17 1-25z" fill="url(#FL)"/><path d="M24 30c3 6 7 9 4 17-1 4-3 6-4 8-2-3-4-5-5-9-1-5 4-8 5-16z" fill="#fff" opacity=".55"/></svg>
+<span class="streak-num">21</span>
+</div>
+<div class="sub" style="margin-top:8px">дней подряд</div>
+</div>
+
+<!-- water -->
+<div class="w sq">
+<div class="wlabel"><span class="ico">💧</span>Вода</div>
+<div class="wbig">1.2<small> / 2 л</small></div>
+<div class="water-tube"><div class="water-fill"></div></div>
+</div>
+
+<!-- read weekly graph -->
+<div class="w wide">
+<div class="wlabel"><span class="ico">📖</span>Читать · 80/100 стр</div>
+<div class="bars">
+<div class="bar" style="height:40%"></div>
+<div class="bar" style="height:65%"></div>
+<div class="bar" style="height:50%"></div>
+<div class="bar" style="height:80%"></div>
+<div class="bar" style="height:70%"></div>
+<div class="bar" style="height:90%"></div>
+<div class="bar" style="height:80%"></div>
+</div>
+<div class="days"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span></div>
+</div>
+
+<!-- зарядка done -->
+<div class="w sq">
+<div class="wlabel"><span class="ico">🏃</span>Зарядка</div>
+<div class="check">✓</div>
+<div class="sub" style="margin-top:10px">Готово · серия 14</div>
+</div>
+
+<!-- не курить yes/no -->
+<div class="w sq">
+<div class="wlabel"><span class="ico">🚭</span>Не курить</div>
+<div class="sub" style="margin-top:8px">Серия 8 дней</div>
+<div class="yn"><button class="yes">Да</button><button class="no">Нет</button></div>
+</div>
+
+<!-- coffee -->
+<div class="w wide">
+<div class="wlabel"><span class="ico">☕</span>Кофе · 1 из ≤2 чаш</div>
+<div class="coffee-dots"><span class="dot on"></span><span class="dot"></span></div>
+<div class="sub" style="margin-top:10px">Серия 3 дня · в пределах нормы</div>
+</div>
+</div>
+</div>
+<div class="tabbar"><span class="tab act">🏠</span><span class="tab">📊</span><span class="tab">➕</span><span class="tab">👤</span></div>
+</div>
+</body>
+</html>

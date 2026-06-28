@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Klio · Garden</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:-apple-system,Inter,system-ui,sans-serif}
+body{background:#0e0e10;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:24px}
+.phone{width:340px;height:720px;border-radius:46px;overflow:hidden;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.notch{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:110px;height:26px;background:#000;border-radius:14px;z-index:99}
+.scr{position:absolute;inset:0;overflow-y:auto;padding:56px 18px 90px;
+  background:linear-gradient(180deg,#fbf3e4 0%,#f6ead0 38%,#eadfc0 100%);color:#43381f}
+.status{display:flex;justify-content:space-between;font-size:13px;font-weight:600;color:#5b4d2c}
+.hello{margin-top:22px}
+.hello h1{font-size:27px;font-weight:800;letter-spacing:-.5px;color:#3c3318}
+.hello .date{font-size:13px;color:#8a7847;margin-top:3px;font-weight:600}
+.summary{margin-top:16px;background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.7);
+  border-radius:22px;padding:14px 16px;display:flex;gap:14px;align-items:center;
+  box-shadow:0 8px 22px rgba(120,100,40,.12)}
+.sun{width:46px;height:46px;border-radius:50%;flex-shrink:0;
+  background:radial-gradient(circle at 35% 35%,#ffe28a,#f6b73c);
+  box-shadow:0 0 0 6px rgba(246,183,60,.18),0 0 24px rgba(246,183,60,.5)}
+.summary .t{font-size:13.5px;font-weight:700;color:#5e4f24}
+.summary .s{font-size:12px;color:#8a7847;margin-top:2px}
+.summary .streak{margin-left:auto;text-align:center}
+.summary .streak b{font-size:22px;font-weight:800;color:#d98c2b;display:block;line-height:1}
+.summary .streak span{font-size:10px;color:#a88f55;font-weight:600}
+.sky{text-align:center;font-size:11px;color:#9c884f;margin:22px 0 4px;font-weight:700;letter-spacing:1px}
+.garden{position:relative}
+.row{position:relative;margin-bottom:14px}
+.bed{background:linear-gradient(180deg,rgba(255,255,255,.5),rgba(255,255,255,.28));
+  border:1px solid rgba(255,255,255,.65);border-radius:24px;padding:14px 16px 14px 84px;
+  min-height:90px;display:flex;flex-direction:column;justify-content:center;position:relative;
+  box-shadow:0 10px 24px rgba(120,100,40,.1)}
+.plant{position:absolute;left:14px;bottom:10px;width:58px;height:72px;display:flex;
+  align-items:flex-end;justify-content:center}
+.pot{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:40px;height:22px;
+  background:linear-gradient(180deg,#c98b5a,#a86a3c);border-radius:4px 4px 10px 10px}
+.pot:after{content:"";position:absolute;top:-4px;left:-3px;right:-3px;height:7px;
+  background:#d4986a;border-radius:5px}
+.stem{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);width:4px;border-radius:3px;
+  background:linear-gradient(180deg,#7bbf6e,#4f9156)}
+.leaf{position:absolute;width:18px;height:11px;border-radius:0 12px 0 12px;background:#6db567}
+.bloom{position:absolute;width:16px;height:16px;border-radius:50%;
+  box-shadow:0 0 0 4px rgba(255,255,255,.35)}
+.name{font-size:15.5px;font-weight:800;color:#473a1c}
+.meta{font-size:12px;color:#8a7847;margin-top:3px;font-weight:600}
+.tag{display:inline-block;margin-top:8px;font-size:11px;font-weight:700;padding:3px 9px;border-radius:20px}
+.serie{position:absolute;top:14px;right:16px;font-size:11px;font-weight:800;color:#a07c3f;
+  display:flex;align-items:center;gap:3px}
+.quit-actions{display:flex;gap:8px;margin-top:9px}
+.qbtn{flex:1;text-align:center;font-size:12px;font-weight:800;padding:7px 0;border-radius:12px;border:none}
+.qbtn.yes{background:#9a7aa0;color:#fff}
+.qbtn.no{background:rgba(154,122,160,.18);color:#7a5d80}
+</style>
+</head>
+<body>
+<div class="phone"><div class="notch"></div>
+<div class="scr">
+  <div class="status"><span>9:41</span><span>📶 🔋</span></div>
+
+  <div class="hello">
+    <h1>Добрый день 🌿</h1>
+    <div class="date">Пятница · 19 июня</div>
+  </div>
+
+  <div class="summary">
+    <div class="sun"></div>
+    <div>
+      <div class="t">Твой сад цветёт</div>
+      <div class="s">2 из 5 целей закрыто сегодня</div>
+    </div>
+    <div class="streak"><b>21</b><span>дней 🔥</span></div>
+  </div>
+
+  <div class="sky">— ГРЯДКИ ПРИВЫЧЕК —</div>
+
+  <div class="garden">
+    <!-- 1 Зарядка done, серия 14 — большое цветущее -->
+    <div class="row"><div class="bed">
+      <div class="serie">🔥 14</div>
+      <div class="plant">
+        <div class="pot"></div>
+        <div class="stem" style="height:48px"></div>
+        <div class="leaf" style="bottom:42px;left:6px;transform:rotate(-30deg)"></div>
+        <div class="leaf" style="bottom:36px;right:6px;transform:rotate(150deg)"></div>
+        <div class="leaf" style="bottom:28px;left:7px;transform:rotate(-25deg)"></div>
+        <div class="bloom" style="bottom:56px;left:50%;margin-left:-8px;background:#5c9a80"></div>
+      </div>
+      <div class="name">Зарядка 🏃</div>
+      <div class="meta">Сделано сегодня · растение распустилось</div>
+      <div class="tag" style="background:rgba(92,154,128,.2);color:#3f7a62">✓ выполнено</div>
+    </div></div>
+
+    <!-- 2 Читать 80/100 серия 21 — самое большое -->
+    <div class="row"><div class="bed">
+      <div class="serie">🔥 21</div>
+      <div class="plant">
+        <div class="pot"></div>
+        <div class="stem" style="height:54px"></div>
+        <div class="leaf" style="bottom:48px;left:5px;transform:rotate(-35deg);background:#8fb96e"></div>
+        <div class="leaf" style="bottom:42px;right:5px;transform:rotate(155deg);background:#8fb96e"></div>
+        <div class="leaf" style="bottom:32px;left:6px;transform:rotate(-25deg);background:#8fb96e"></div>
+        <div class="leaf" style="bottom:26px;right:6px;transform:rotate(150deg);background:#8fb96e"></div>
+        <div class="bloom" style="bottom:60px;left:50%;margin-left:-8px;background:#ae8a5a"></div>
+      </div>
+      <div class="name">Читать 📖</div>
+      <div class="meta">80 / 100 стр · почти распустилось</div>
+      <div class="tag" style="background:rgba(174,138,90,.2);color:#8a6a3a">в процессе · 80%</div>
+    </div></div>
+
+    <!-- 3 Вода 1.2/2 серия 4 — росток -->
+    <div class="row"><div class="bed">
+      <div class="serie">🔥 4</div>
+      <div class="plant">
+        <div class="pot"></div>
+        <div class="stem" style="height:22px;background:linear-gradient(180deg,#7fc8d4,#4f9156)"></div>
+        <div class="leaf" style="bottom:20px;left:8px;transform:rotate(-30deg);background:#7bc7a0"></div>
+        <div class="leaf" style="bottom:16px;right:8px;transform:rotate(150deg);background:#7bc7a0"></div>
+      </div>
+      <div class="name">Вода 💧</div>
+      <div class="meta">1.2 / 2 л · молодой росток</div>
+      <div class="tag" style="background:rgba(94,131,168,.2);color:#436087">в процессе · 60%</div>
+    </div></div>
+
+    <!-- 4 Не курить — отметка воздержания, серия 8 -->
+    <div class="row"><div class="bed">
+      <div class="serie">🔥 8</div>
+      <div class="plant">
+        <div class="pot"></div>
+        <div class="stem" style="height:34px;background:linear-gradient(180deg,#b89ac0,#7d6184)"></div>
+        <div class="leaf" style="bottom:30px;left:7px;transform:rotate(-30deg);background:#b89ac0"></div>
+        <div class="leaf" style="bottom:24px;right:7px;transform:rotate(150deg);background:#b89ac0"></div>
+        <div class="bloom" style="bottom:38px;left:50%;margin-left:-8px;background:#9a7aa0"></div>
+      </div>
+      <div class="name">Не курить 🚭</div>
+      <div class="meta">Удержался сегодня?</div>
+      <div class="quit-actions">
+        <button class="qbtn yes">Да, чисто</button>
+        <button class="qbtn no">Нет</button>
+      </div>
+    </div></div>
+
+    <!-- 5 Кофе 1/<=2 серия 3 -->
+    <div class="row"><div class="bed">
+      <div class="serie">🔥 3</div>
+      <div class="plant">
+        <div class="pot"></div>
+        <div class="stem" style="height:20px;background:linear-gradient(180deg,#a9c47f,#4f9156)"></div>
+        <div class="leaf" style="bottom:18px;left:9px;transform:rotate(-30deg);background:#9bb872"></div>
+        <div class="leaf" style="bottom:14px;right:9px;transform:rotate(150deg);background:#9bb872"></div>
+      </div>
+      <div class="name">Кофе ☕</div>
+      <div class="meta">1 / ≤2 чаш · в пределах нормы</div>
+      <div class="tag" style="background:rgba(126,150,103,.2);color:#5f7548">в норме</div>
+    </div></div>
+  </div>
+</div></div>
+</body>
+</html>

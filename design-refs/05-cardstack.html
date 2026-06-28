@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Klio · Card Stack</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:-apple-system,Inter,system-ui,sans-serif}
+body{background:#0e0e10;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:24px}
+.phone{width:340px;height:720px;border-radius:46px;overflow:hidden;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.notch{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:110px;height:26px;background:#000;border-radius:14px;z-index:99}
+.scr{position:absolute;inset:0;overflow:hidden;padding:56px 18px 90px;background:radial-gradient(120% 80% at 50% 0%,#2a2230 0%,#14121a 55%,#0e0d12 100%);color:#efe9f2;display:flex;flex-direction:column}
+
+.status{display:flex;justify-content:space-between;font-size:13px;font-weight:600;color:#cfc7d6}
+.head{margin-top:18px;text-align:center}
+.head .date{font-size:12px;color:#9b8fa8;font-weight:600;letter-spacing:.3px}
+.head h1{font-size:20px;font-weight:700;margin-top:3px}
+.head .sum{font-size:12px;color:#a89cb6;margin-top:5px}
+
+.stage{flex:1;position:relative;margin-top:20px;display:flex;align-items:center;justify-content:center}
+.back2,.back1{position:absolute;left:50%;border-radius:30px;background:#241f2c;border:1px solid #322a3c}
+.back2{width:78%;height:300px;top:-2px;transform:translateX(-50%);box-shadow:0 10px 30px rgba(0,0,0,.3)}
+.back1{width:88%;height:316px;top:6px;transform:translateX(-50%);background:#2a2433;box-shadow:0 14px 34px rgba(0,0,0,.35)}
+
+.card{position:relative;width:100%;max-width:280px;height:380px;border-radius:32px;padding:30px 26px;
+  background:linear-gradient(160deg,#fbf6ee 0%,#f3ead9 100%);color:#2a2418;
+  box-shadow:0 26px 60px rgba(0,0,0,.45);display:flex;flex-direction:column;align-items:center;text-align:center}
+.tag{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#ae8a5a;
+  background:rgba(174,138,90,.14);padding:6px 12px;border-radius:20px}
+.bigic{width:104px;height:104px;border-radius:32px;background:rgba(174,138,90,.16);
+  display:flex;align-items:center;justify-content:center;font-size:52px;margin:26px 0 18px}
+.card h2{font-size:27px;font-weight:800;letter-spacing:-.5px}
+.prog{font-size:15px;color:#7c6f56;margin-top:8px;font-weight:600}
+.ring{margin-top:18px;position:relative;width:78px;height:78px}
+.ring svg{transform:rotate(-90deg)}
+.ring .pct{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:#8a6d44}
+.streak2{font-size:12px;color:#9a8a6c;margin-top:14px;font-weight:600}
+
+.btns{display:flex;gap:14px;margin-top:18px}
+.btn{flex:1;border:none;border-radius:20px;padding:16px 0;font-size:15px;font-weight:700;display:flex;align-items:center;justify-content:center;gap:8px}
+.skip{background:#241f2c;color:#b3a7c0;border:1px solid #362e42}
+.done{background:#ae8a5a;color:#fff;box-shadow:0 10px 24px rgba(174,138,90,.4)}
+.dots{display:flex;gap:7px;justify-content:center;margin-top:18px}
+.dots i{width:7px;height:7px;border-radius:50%;background:#4a4256}
+.dots i.on{width:22px;border-radius:4px;background:#ae8a5a}
+</style>
+</head>
+<body>
+<div class="phone"><div class="notch"></div><div class="scr">
+  <div class="status"><span>9:41</span><span>📶 🔋</span></div>
+  <div class="head">
+    <div class="date">Пятница · 19 июня</div>
+    <h1>Добрый день</h1>
+    <div class="sum">2 из 5 закрыто · 🔥 серия 21 день</div>
+  </div>
+
+  <div class="stage">
+    <div class="back2"></div>
+    <div class="back1"></div>
+    <div class="card">
+      <div class="tag">Привычка 2 из 5</div>
+      <div class="bigic">📖</div>
+      <h2>Читать</h2>
+      <div class="prog">80 / 100 страниц</div>
+      <div class="ring">
+        <svg width="78" height="78">
+          <circle cx="39" cy="39" r="33" stroke="#e6d9c2" stroke-width="8" fill="none"/>
+          <circle cx="39" cy="39" r="33" stroke="#ae8a5a" stroke-width="8" fill="none"
+            stroke-linecap="round" stroke-dasharray="207" stroke-dashoffset="41"/>
+        </svg>
+        <div class="pct">80%</div>
+      </div>
+      <div class="streak2">🔥 серия 21 день</div>
+    </div>
+  </div>
+
+  <div class="btns">
+    <button class="btn skip">✕ Пропустить</button>
+    <button class="btn done">✓ Готово</button>
+  </div>
+  <div class="dots"><i></i><i class="on"></i><i></i><i></i><i></i></div>
+</div></div>
+</body>
+</html>

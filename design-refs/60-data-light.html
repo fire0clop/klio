@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Klio · data-light</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:-apple-system,Inter,system-ui,sans-serif}
+body{background:#0e0e10;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:24px}
+.phone{width:340px;height:720px;border-radius:46px;overflow:hidden;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.notch{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:110px;height:26px;background:#000;border-radius:14px;z-index:99}
+.scr{position:absolute;inset:0;overflow-y:auto;padding:56px 18px 90px;color:#2b2545;
+background:radial-gradient(120% 80% at 0% 0%,#ffb3d9 0,transparent 50%),radial-gradient(120% 80% at 100% 6%,#a9c7ff 0,transparent 50%),radial-gradient(100% 90% at 50% 100%,#d4c2ff 0,transparent 55%),linear-gradient(160deg,#ffe1ef,#d8e6ff)}
+.sb{display:flex;justify-content:space-between;font-size:13px;font-weight:600}
+.muted{color:#6b6388}
+.w{backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);background:rgba(255,255,255,.42);border:1px solid rgba(255,255,255,.6);border-radius:26px;box-shadow:0 12px 30px rgba(120,90,160,.16);padding:16px;position:relative;overflow:hidden}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.sq{aspect-ratio:1/1}
+.wide{grid-column:span 2}
+.head{margin-top:16px;display:flex;align-items:center;justify-content:space-between}
+.head .greet{font-size:12px;color:#6b6388;font-weight:600}
+.head h1{font-size:22px;font-weight:800;letter-spacing:-.5px}
+.head .date{font-size:11px;color:#6b6388;margin-top:2px}
+.streakpill{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.6);border-radius:16px;padding:7px 11px}
+.streakpill b{font-size:16px;font-weight:800}
+.streakpill span{font-size:10px;color:#6b6388;font-weight:600;line-height:1.1}
+.htitle{font-size:13px;font-weight:700}
+.hsub{font-size:11px;color:#6b6388}
+.big{font-size:22px;font-weight:800;letter-spacing:-.5px}
+/* weekly bar chart */
+.chartcard{margin-top:14px}
+.chartlbl{display:flex;justify-content:space-between;align-items:baseline}
+.chart{display:flex;align-items:flex-end;justify-content:space-between;gap:6px;height:88px;margin-top:14px}
+.col{flex:1;display:flex;flex-direction:column;align-items:center;gap:6px}
+.colbar{width:100%;max-width:22px;border-radius:7px 7px 4px 4px;background:linear-gradient(180deg,#ff7eb3,#8a7bff)}
+.colbar.dim{background:rgba(120,110,170,.2)}
+.coltxt{font-size:9px;color:#6b6388;font-weight:600}
+/* ring stat */
+.ringwrap{display:flex;align-items:center;gap:10px}
+.ringval{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.liquid .wfill{position:absolute;left:0;right:0;bottom:0;height:var(--lvl,60%);background:linear-gradient(180deg,var(--c1),var(--c2));opacity:.85}
+.liquid .wfill::before{content:"";position:absolute;top:-8px;left:0;right:0;height:16px;background:var(--c1);border-radius:45%;opacity:.85}
+.liquid .content{position:relative;z-index:3;height:100%;display:flex;flex-direction:column;justify-content:space-between}
+.statline{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid rgba(120,110,170,.12);font-size:12px}
+.statline:last-child{border:none}
+.dot{width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:7px}
+.pct{font-weight:800;font-size:13px}
+.sectitle{font-size:14px;font-weight:800;margin:18px 4px 0;letter-spacing:-.2px}
+</style>
+</head>
+<body>
+<div class="phone"><div class="notch"></div>
+<div class="scr">
+<div class="sb"><span>9:41</span><span>📶 🔋</span></div>
+
+<div class="head">
+<div>
+<div class="greet">Добрый день</div>
+<h1>Klio</h1>
+<div class="date">Пятница · 19 июня</div>
+</div>
+<div class="streakpill">
+<svg viewBox="0 0 48 64" width="22" height="29"><defs><linearGradient id="FL" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd36b"/><stop offset=".45" stop-color="#ff7eb3"/><stop offset="1" stop-color="#8a7bff"/></linearGradient></defs><path d="M24 1c5 13 17 17 13 33-2 9-8 14-13 18-5-4-11-9-13-18-2-8 3-13 5-19 1 6 4 9 7 11-3-9 1-17 1-25z" fill="url(#FL)"/></svg>
+<div><b>21</b><br><span>дней<br>подряд</span></div>
+</div>
+</div>
+
+<!-- summary ring + weekly progress -->
+<div class="w chartcard">
+<div class="ringwrap">
+<div style="position:relative;width:110px;height:110px;flex-shrink:0">
+<svg width=110 height=110 viewBox="0 0 110 110"><circle cx=55 cy=55 r=46 fill=none stroke="rgba(120,110,170,.18)" stroke-width=10/><circle cx=55 cy=55 r=46 fill=none stroke="url(#R)" stroke-width=10 stroke-linecap=round stroke-dasharray=289 stroke-dashoffset=173 transform="rotate(-90 55 55)"/><defs><linearGradient id=R x1=0 y1=0 x2=1 y2=1><stop offset=0 stop-color=#ff7eb3/><stop offset=1 stop-color=#8a7bff/></linearGradient></defs></svg>
+<div class="ringval"><div class="big">40%</div><div class="hsub">2 из 5</div></div>
+</div>
+<div style="flex:1">
+<div class="htitle" style="margin-bottom:8px">Сегодня</div>
+<div class="hsub" style="line-height:1.45">Осталось 3 привычки. Вода, чтение и кофе ждут. Ты молодец!</div>
+</div>
+</div>
+</div>
+
+<!-- weekly bar chart -->
+<div class="w chartcard">
+<div class="chartlbl"><div class="htitle">Эта неделя</div><div class="hsub">в среднем 78%</div></div>
+<div class="chart">
+<div class="col"><div class="colbar" style="height:55%"></div><div class="coltxt">Пн</div></div>
+<div class="col"><div class="colbar" style="height:80%"></div><div class="coltxt">Вт</div></div>
+<div class="col"><div class="colbar" style="height:65%"></div><div class="coltxt">Ср</div></div>
+<div class="col"><div class="colbar" style="height:92%"></div><div class="coltxt">Чт</div></div>
+<div class="col"><div class="colbar" style="height:40%"></div><div class="coltxt">Пт</div></div>
+<div class="col"><div class="colbar dim" style="height:18%"></div><div class="coltxt">Сб</div></div>
+<div class="col"><div class="colbar dim" style="height:18%"></div><div class="coltxt">Вс</div></div>
+</div>
+</div>
+
+<div class="sectitle">Привычки</div>
+
+<div class="grid">
+<!-- water liquid -->
+<div class="w sq liquid" style="--lvl:60%;--c1:#7fb0e0;--c2:#5e83a8">
+<div class="wfill"></div>
+<div class="content"><div class="htitle">💧 Вода</div><div><div class="big" style="color:#1f3850">60%</div><div class="hsub" style="color:#274055">1.2 / 2 л</div></div></div>
+</div>
+
+<!-- reading ring -->
+<div class="w sq">
+<div class="content" style="height:100%;display:flex;flex-direction:column;justify-content:space-between">
+<div class="htitle">📖 Читать</div>
+<div style="position:relative;width:62px;height:62px;align-self:center">
+<svg width=62 height=62 viewBox="0 0 62 62"><circle cx=31 cy=31 r=26 fill=none stroke="rgba(174,138,90,.18)" stroke-width=7/><circle cx=31 cy=31 r=26 fill=none stroke="#ae8a5a" stroke-width=7 stroke-linecap=round stroke-dasharray=163 stroke-dashoffset=33 transform="rotate(-90 31 31)"/></svg>
+<div class="ringval"><div style="font-size:15px;font-weight:800">80%</div></div>
+</div>
+<div class="hsub">80 / 100 стр.</div>
+</div>
+</div>
+
+<!-- stats list wide -->
+<div class="w wide">
+<div class="statline"><span><span class="dot" style="background:#5c9a80"></span>🏃 Зарядка</span><span class="pct" style="color:#5c9a80">✓ 14</span></div>
+<div class="statline"><span><span class="dot" style="background:#9a7aa0"></span>🚭 Не курить</span><span class="pct" style="color:#9a7aa0">✓ 8</span></div>
+<div class="statline"><span><span class="dot" style="background:#7e9667"></span>☕ Кофе</span><span class="pct" style="color:#7e9667">1 / ≤2 · 3</span></div>
+</div>
+</div>
+
+</div></div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+# Замени api.yourdomain.com на свой домен
+api.klio-diary.ru {
+    reverse_proxy api:8000
+}

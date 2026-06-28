@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Klio · Путь</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:-apple-system,Inter,system-ui,sans-serif}
+body{background:#0e0e10;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:24px}
+.phone{width:340px;height:720px;border-radius:46px;overflow:hidden;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.notch{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:110px;height:26px;background:#000;border-radius:14px;z-index:99}
+.scr{position:absolute;inset:0;overflow-y:auto;padding:56px 18px 90px;background:radial-gradient(120% 60% at 50% 0%,#1c2230 0%,#101218 55%,#0c0d11 100%);color:#eef0f4}
+
+.status{display:flex;justify-content:space-between;font-size:13px;font-weight:600}
+.hello{margin-top:22px}
+.hello h1{font-size:25px;font-weight:700;letter-spacing:-.5px}
+.hello .date{font-size:13px;color:#8b93a4;margin-top:3px;font-weight:500}
+.prog{margin-top:14px;display:flex;align-items:center;gap:10px}
+.prog .bar{flex:1;height:7px;border-radius:5px;background:rgba(255,255,255,.08);overflow:hidden}
+.prog .fill{width:40%;height:100%;border-radius:5px;background:linear-gradient(90deg,#5c9a80,#ae8a5a)}
+.prog .lab{font-size:12px;color:#a6adbb;font-weight:600;white-space:nowrap}
+
+.map{position:relative;margin-top:18px;height:1080px}
+.map svg{position:absolute;inset:0;width:100%;height:100%}
+
+.node{position:absolute;width:62px;transform:translate(-50%,-50%);text-align:center;z-index:5}
+.dot{width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;margin:0 auto;border:2px solid rgba(255,255,255,.1);background:#1a1d26;position:relative}
+.dot.done{border-color:rgba(255,255,255,.0)}
+.dot.done::after{content:"✓";position:absolute;right:-3px;bottom:-3px;width:22px;height:22px;border-radius:50%;background:#5c9a80;color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;border:2px solid #101218}
+.dot.now{animation:pulse 1.8s infinite}
+.lbl{margin-top:8px;font-size:11.5px;font-weight:600;line-height:1.2}
+.sub{font-size:10px;color:#8b93a4;font-weight:500;margin-top:1px}
+.streak{font-size:9.5px;color:#c9a14e;font-weight:700;margin-top:2px}
+
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(174,138,90,.55)}70%{box-shadow:0 0 0 16px rgba(174,138,90,0)}100%{box-shadow:0 0 0 0 rgba(174,138,90,0)}}
+
+.flag{position:absolute;left:50%;top:1010px;transform:translateX(-50%);text-align:center;z-index:5}
+.flag .f{font-size:30px}
+.flag .t{font-size:11px;color:#8b93a4;font-weight:600;margin-top:2px}
+
+.fab{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);width:58px;height:58px;border-radius:20px;background:#eef0f4;color:#101218;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:300;box-shadow:0 10px 30px rgba(0,0,0,.5);z-index:50}
+</style>
+</head>
+<body>
+<div class="phone"><div class="notch"></div>
+<div class="scr">
+  <div class="status"><span>9:41</span><span>📶 🔋</span></div>
+
+  <div class="hello">
+    <h1>Добрый день</h1>
+    <div class="date">Пятница · 19 июня · серия 21 день 🔥</div>
+    <div class="prog">
+      <div class="bar"><div class="fill"></div></div>
+      <div class="lab">2 / 5 пройдено</div>
+    </div>
+  </div>
+
+  <div class="map">
+    <svg viewBox="0 0 304 1080" preserveAspectRatio="none">
+      <path d="M 60 40 C 60 130, 250 150, 250 240 S 60 360, 60 450 S 250 580, 250 670 S 60 800, 60 890 C 60 950, 150 980, 152 1010"
+            fill="none" stroke="rgba(255,255,255,.10)" stroke-width="16" stroke-linecap="round"/>
+      <!-- progress overlay up to current node (~node 2) -->
+      <path d="M 60 40 C 60 130, 250 150, 250 240 S 60 360, 60 450"
+            fill="none" stroke="url(#g)" stroke-width="16" stroke-linecap="round" stroke-dasharray="6 0"/>
+      <defs>
+        <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#5c9a80"/>
+          <stop offset="1" stop-color="#ae8a5a"/>
+        </linearGradient>
+      </defs>
+    </svg>
+
+    <!-- Node 1: Зарядка (done) — top left -->
+    <div class="node" style="left:60px;top:40px">
+      <div class="dot done" style="background:rgba(92,154,128,.22);border-color:#5c9a80">🏃</div>
+      <div class="lbl">Зарядка</div>
+      <div class="sub">Сделано</div>
+      <div class="streak">🔥 14</div>
+    </div>
+
+    <!-- Node 2: Читать (done) — right -->
+    <div class="node" style="left:250px;top:240px">
+      <div class="dot done" style="background:rgba(174,138,90,.22);border-color:#ae8a5a">📖</div>
+      <div class="lbl">Читать</div>
+      <div class="sub">80/100</div>
+      <div class="streak">🔥 21</div>
+    </div>
+
+    <!-- Node 3: Вода (now) — left -->
+    <div class="node" style="left:60px;top:450px">
+      <div class="dot now" style="background:rgba(94,131,168,.25);border-color:#5e83a8">💧</div>
+      <div class="lbl">Вода</div>
+      <div class="sub">1.2 / 2 л</div>
+      <div class="streak">🔥 4</div>
+    </div>
+
+    <!-- Node 4: Не курить — right -->
+    <div class="node" style="left:250px;top:670px">
+      <div class="dot" style="background:rgba(154,122,160,.14)">🚭</div>
+      <div class="lbl">Не курить</div>
+      <div class="sub">Отметить</div>
+      <div class="streak">🔥 8</div>
+    </div>
+
+    <!-- Node 5: Кофе — left -->
+    <div class="node" style="left:60px;top:890px">
+      <div class="dot" style="background:rgba(126,150,103,.14)">☕</div>
+      <div class="lbl">Кофе</div>
+      <div class="sub">1 / ≤2</div>
+      <div class="streak">🔥 3</div>
+    </div>
+
+    <div class="flag">
+      <div class="f">🏁</div>
+      <div class="t">Цель дня</div>
+    </div>
+  </div>
+
+</div>
+<div class="fab">+</div>
+</div>
+</body>
+</html>
