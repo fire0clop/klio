@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/banner.svg" alt="klio banner" width="100%">
+</p>
+
 # Klio
 
 **An AI goal-tracking journal that shows you how your habits reshape your body and mind — one honest check-in at a time.**
