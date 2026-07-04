@@ -10,9 +10,19 @@ from typing import List
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
 
-from app.models.models import Goal, Sphere, User
+from app.models.models import Goal, Sphere, User, UserProfile
 from app.services.ai_service import assign_spheres, compute_sphere_updates
 from app.services.streak_service import calculate_completion_rate, calculate_streak
+
+
+async def _user_language(user_id, db: AsyncSession) -> str:
+    """Язык профиля явным запросом: обращение к user.profile здесь — это
+    ленивый sync-load в async-сессии (MissingGreenlet), который раньше молча
+    гасился try/except вокруг ИИ-вызова и отключал всю логику сфер."""
+    res = await db.execute(
+        select(UserProfile.language).where(UserProfile.user_id == user_id)
+    )
+    return res.scalar_one_or_none() or "ru"
 
 
 def _goal_adherence(goal: Goal, today: date) -> dict:
@@ -47,8 +57,9 @@ async def assign_goal_spheres(user: User, goal: Goal, db: AsyncSession) -> None:
         "summary": goal.ai_summary,
         "end_condition": goal.end_condition,
     }
+    lang = await _user_language(user.id, db)
     try:
-        assigned = await assign_spheres(goal_info, existing_list, lang=(user.profile.language if user.profile else "ru"))
+        assigned = await assign_spheres(goal_info, existing_list, lang=lang)
     except Exception:
         assigned = []
 
@@ -94,8 +105,9 @@ async def update_spheres(user: User, goals: List[Goal], db: AsyncSession) -> Non
         "goals": [_goal_adherence(g, today) for g in contrib.get(s.key, [])],
     } for s in spheres]
 
+    lang = await _user_language(user.id, db)
     try:
-        updates = await compute_sphere_updates(payload, lang=(user.profile.language if user.profile else "ru"))
+        updates = await compute_sphere_updates(payload, lang=lang)
     except Exception:
         updates = []
     by_key = {u["key"]: u for u in updates}

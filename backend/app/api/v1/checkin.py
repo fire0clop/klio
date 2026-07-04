@@ -7,7 +7,7 @@ from sqlalchemy.orm import selectinload
 
 from app.api.deps import get_current_user
 from app.database import get_db
-from app.models.models import DailyLog, Goal, GoalEntry, User
+from app.models.models import DailyLog, Goal, GoalEntry, GoalMetricEntry, User
 from app.schemas.checkin import (
     CheckInRequest,
     CheckInTodayResponse,

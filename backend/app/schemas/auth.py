@@ -1,11 +1,12 @@
 from typing import Optional
 
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel, EmailStr, Field
 
 
 class RegisterRequest(BaseModel):
     email: EmailStr
-    password: str
+    # Минимум синхронизирован с валидацией iOS-клиента (RegisterView: count >= 6)
+    password: str = Field(min_length=6, max_length=128)
 
 
 class LoginRequest(BaseModel):
