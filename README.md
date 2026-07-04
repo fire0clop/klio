@@ -7,6 +7,7 @@
 **An AI goal-tracking journal that shows you how your habits reshape your body and mind — one honest check-in at a time.**
 
 <p>
+  <a href="https://apps.apple.com/us/app/klio/id6771368116"><img alt="Download on the App Store" src="https://img.shields.io/badge/App_Store-Live-000000?logo=apple&logoColor=white"></a>
   <img alt="Swift" src="https://img.shields.io/badge/Swift-6.0-F05138?logo=swift&logoColor=white">
   <img alt="SwiftUI" src="https://img.shields.io/badge/SwiftUI-iOS%2017%2B-0A84FF?logo=apple&logoColor=white">
   <img alt="Python" src="https://img.shields.io/badge/Python-3.12%2B-3776AB?logo=python&logoColor=white">
@@ -19,6 +20,8 @@
 </p>
 
 ---
+
+> 📲 **Klio is live on the [App Store](https://apps.apple.com/us/app/klio/id6771368116)** — iPhone, iPad and Mac, in English, Russian and Spanish.
 
 ## Overview
 
